@@ -457,6 +457,926 @@
     "is_active": false,
     "correct_answer": "c",
     "is_answer_correct": false
+  },
+
+  {
+    "id": 21,
+    "question_number": 21,
+    "question": "Name the first President of the Philippines.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Emilio Aguinaldo"
+      },
+      {
+        "letter": "b",
+        "value": "Jose P. Laurel"
+      },
+      {
+        "letter": "c",
+        "value": "Manuel L. Quezon"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 22,
+    "question_number": 22,
+    "question": "Who designed the Philippine National Flag?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Andres Bonifacio"
+      },
+      {
+        "letter": "b",
+        "value": "Apolinario Mabini"
+      },
+      {
+        "letter": "c",
+        "value": "Emilio Aguinaldo"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 23,
+    "question_number": 23,
+    "question": "Who composed the National Anthem of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Jose Palma"
+      },
+      {
+        "letter": "b",
+        "value": "Julian Felipe"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Rizal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 24,
+    "question_number": 24,
+    "question": "When was Lupang Hinirang first heard in public?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "June 12, 1898"
+      },
+      {
+        "letter": "b",
+        "value": "July 12, 1898"
+      },
+      {
+        "letter": "c",
+        "value": "June 12, 1889"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 25,
+    "question_number": 25,
+    "question": "Who brought Catholicism in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Pope Francis"
+      },
+      {
+        "letter": "b",
+        "value": "Miguel Lopez de Legazpi"
+      },
+      {
+        "letter": "c",
+        "value": "Ferdinand Magellan"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 26,
+    "question_number": 26,
+    "question": "In which year was Martial Law declared in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "1972"
+      },
+      {
+        "letter": "b",
+        "value": "1965"
+      },
+      {
+        "letter": "c",
+        "value": "1986"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 27,
+    "question_number": 27,
+    "question": "How old was Jose Rizal when he was executed?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "45"
+      },
+      {
+        "letter": "b",
+        "value": "50"
+      },
+      {
+        "letter": "c",
+        "value": "35"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 28,
+    "question_number": 28,
+    "question": "On March 16, 1521, Magellan’s expedition landed in the Philippines on the Island of",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Homonhon Island"
+      },
+      {
+        "letter": "b",
+        "value": "Suluan Island"
+      },
+      {
+        "letter": "c",
+        "value": "Guiuan Island"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 29,
+    "question_number": 29,
+    "question": "Who led the rebellion in Mactan that results to the death of Ferdinand Magellan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Raja Humabon"
+      },
+      {
+        "letter": "b",
+        "value": "Datu Zula"
+      },
+      {
+        "letter": "c",
+        "value": "Lapu-Lapu"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 30,
+    "question_number": 30,
+    "question": "He changed the date of celebration of the Philippine Independence from July 4 to June 12.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ferdinan Marcos"
+      },
+      {
+        "letter": "b",
+        "value": "Diosdado Macapagal"
+      },
+      {
+        "letter": "c",
+        "value": "Emilio Aguinaldo"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 31,
+    "question_number": 31,
+    "question": "On July 4, 1946, who was inaugurated as the first President of the Third Republic of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Elpidio Quirino"
+      },
+      {
+        "letter": "b",
+        "value": "Manuel Roxas"
+      },
+      {
+        "letter": "c",
+        "value": "Fidel Ramos"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 32,
+    "question_number": 32,
+    "question": "Who followed the route taken by Magellan and reached Mindanao on February 2, 1543 and then established a colony in Sarangani?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Lapu-Lapu"
+      },
+      {
+        "letter": "b",
+        "value": "Villalobos"
+      },
+      {
+        "letter": "c",
+        "value": "Alvaro De Saavedra"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 33,
+    "question_number": 33,
+    "question": "In 1565, who was appointed by King Philip II as the first Governor-General of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Wesley Merritt"
+      },
+      {
+        "letter": "b",
+        "value": "Diego de los Rios"
+      },
+      {
+        "letter": "c",
+        "value": "Miguel Lopez de Legazpi"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 34,
+    "question_number": 34,
+    "question": "He was the Fourth President of the Republic of the Philippines. He was noted for the enunciation of the Filipino First Policy.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Carlos Garcia"
+      },
+      {
+        "letter": "b",
+        "value": "Ramon Magsaysay"
+      },
+      {
+        "letter": "c",
+        "value": "Diosdado Macapagal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 35,
+    "question_number": 35,
+    "question": "On the night of July 7, 1892, Jose Rizal was banished and exiled to.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Cavite"
+      },
+      {
+        "letter": "b",
+        "value": "Bulacan"
+      },
+      {
+        "letter": "c",
+        "value": "Dapitan"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 36,
+    "question_number": 36,
+    "question": "He was elected as the first president of the supreme council of the Katipunan.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Bonifacio"
+      },
+      {
+        "letter": "b",
+        "value": "Arellano"
+      },
+      {
+        "letter": "c",
+        "value": "Jacinto"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 37,
+    "question_number": 37,
+    "question": "What is Jose Rizal’s profession?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Cardiologist"
+      },
+      {
+        "letter": "b",
+        "value": "Urologist"
+      },
+      {
+        "letter": "c",
+        "value": "Opthalmologist"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 38,
+    "question_number": 38,
+    "question": "Who is Jose Rizal’s Mother?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Teodora"
+      },
+      {
+        "letter": "b",
+        "value": "Francisca"
+      },
+      {
+        "letter": "c",
+        "value": "Gregoria"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 39,
+    "question_number": 39,
+    "question": "When was Jose Rizal born?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "June 19, 1851"
+      },
+      {
+        "letter": "b",
+        "value": "June 19, 1861"
+      },
+      {
+        "letter": "c",
+        "value": "June 19, 1860"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 40,
+    "question_number": 40,
+    "question": "Date when Jose Rizal was executed.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "December 30, 1897"
+      },
+      {
+        "letter": "b",
+        "value": "December 30, 1898"
+      },
+      {
+        "letter": "c",
+        "value": "December 30, 1896"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 41,
+    "question_number": 41,
+    "question": "What is the largest and most populous island in the philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Luzon"
+      },
+      {
+        "letter": "b",
+        "value": "Visayas"
+      },
+      {
+        "letter": "c",
+        "value": "Mindanao"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 42,
+    "question_number": 42,
+    "question": "What is the english translation of El Filibusterismo?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "The Reign of Power"
+      },
+      {
+        "letter": "b",
+        "value": "The Reign of Death"
+      },
+      {
+        "letter": "c",
+        "value": "The Reign of Greed"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 43,
+    "question_number": 43,
+    "question": "The Father of the Filipino Language?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Manuel Quezon"
+      },
+      {
+        "letter": "b",
+        "value": "Manuel Roxas"
+      },
+      {
+        "letter": "c",
+        "value": "Elpidio Quirino"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 44,
+    "question_number": 44,
+    "question": "He Created the president’s Action Committee on Social Amelioration or PACSA?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Jose P. Laurel"
+      },
+      {
+        "letter": "b",
+        "value": "Elpidio Quirino"
+      },
+      {
+        "letter": "c",
+        "value": "Fidel V. Ramos"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 45,
+    "question_number": 45,
+    "question": "Which of these was the head of the philippines government during the spanish period?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Gobernadorcilo"
+      },
+      {
+        "letter": "b",
+        "value": "Alkalde Mayor"
+      },
+      {
+        "letter": "c",
+        "value": "Gobernador-Heneral"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 46,
+    "question_number": 46,
+    "question": "What is the typical tagalog love song called?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Harana"
+      },
+      {
+        "letter": "b",
+        "value": "Balitaw"
+      },
+      {
+        "letter": "c",
+        "value": "Kumintang"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 47,
+    "question_number": 47,
+    "question": "What is the typical visayan love song called?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Harana"
+      },
+      {
+        "letter": "b",
+        "value": "Balitaw"
+      },
+      {
+        "letter": "c",
+        "value": "Kundiman"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 48,
+    "question_number": 48,
+    "question": "Panagbenga Festival celebrated in what province?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Batangas"
+      },
+      {
+        "letter": "b",
+        "value": "Bataan"
+      },
+      {
+        "letter": "c",
+        "value": "Baguio"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 49,
+    "question_number": 49,
+    "question": "Dinagyang Festival celebrated in?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ilo-Ilo"
+      },
+      {
+        "letter": "b",
+        "value": "Cebu"
+      },
+      {
+        "letter": "c",
+        "value": "Davao"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 50,
+    "question_number": 50,
+    "question": "What month ati-atihan celebrated?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "April"
+      },
+      {
+        "letter": "b",
+        "value": "January"
+      },
+      {
+        "letter": "c",
+        "value": "December"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 51,
+    "question_number": 51,
+    "question": "The First real battle fought between Filipinos and the Spaniards is known as?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Majayjay"
+      },
+      {
+        "letter": "b",
+        "value": "Pugad Lawin"
+      },
+      {
+        "letter": "c",
+        "value": "Montalban"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 52,
+    "question_number": 52,
+    "question": "What did the First Philippine Republic came to be called?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Biak-na-bato Republic"
+      },
+      {
+        "letter": "b",
+        "value": "Sakay Republic"
+      },
+      {
+        "letter": "c",
+        "value": "Malolos Republic"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 53,
+    "question_number": 53,
+    "question": "Taga-ilog was the pen name which was associated with?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Juan Luna"
+      },
+      {
+        "letter": "b",
+        "value": "Antonio Luna"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Ma. Panganiban"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 54,
+    "question_number": 54,
+    "question": "Who found Diariong tagalog?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Juan Luna"
+      },
+      {
+        "letter": "b",
+        "value": "Marcel del Pilar"
+      },
+      {
+        "letter": "c",
+        "value": "Pedro Laktaw"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 55,
+    "question_number": 55,
+    "question": "What was the first book published in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "El Filibusterismo"
+      },
+      {
+        "letter": "b",
+        "value": "Noli Me Tangere"
+      },
+      {
+        "letter": "c",
+        "value": "Doctrina Christiana"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 56,
+    "question_number": 56,
+    "question": "She was the first woman member of the katipunan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Gregoria De Jesus"
+      },
+      {
+        "letter": "b",
+        "value": "Melchora Aquino"
+      },
+      {
+        "letter": "c",
+        "value": "Maria Dizon"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 57,
+    "question_number": 57,
+    "question": "Who was the First Filipino recording artist?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Maria Carpena"
+      },
+      {
+        "letter": "b",
+        "value": "Lucio San Pedro"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Maceda"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 58,
+    "question_number": 58,
+    "question": "For how many years did Spanish rule last in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "235 years"
+      },
+      {
+        "letter": "b",
+        "value": "108 years"
+      },
+      {
+        "letter": "c",
+        "value": "333 years"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 59,
+    "question_number": 59,
+    "question": "Who was the Spanish governor-general who ordered the deportation of Jose Rizal to Dapitan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Gov. Gen. Eulogio Despujol"
+      },
+      {
+        "letter": "b",
+        "value": "Gov. Gen. Marcelo Vuenaventura"
+      },
+      {
+        "letter": "c",
+        "value": "Gov. Gen. Pedro Masinao"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 60,
+    "question_number": 60,
+    "question": "After the death of her husband Andres Bonifacio, Gregoria de Jesus was later married to whom?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Macario Sakay"
+      },
+      {
+        "letter": "b",
+        "value": "Santiago Alvarez"
+      },
+      {
+        "letter": "c",
+        "value": "Julio Nakpil"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
   }
 
 ]

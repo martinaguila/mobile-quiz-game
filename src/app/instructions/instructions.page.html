@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="title">
+    How to play
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Mechanics</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+          1. Player has only 3 trials to finish the game. <br>
+          2. Player is given 15 seconds to answer the current question. <br>
+          3. Game is over if player used all its trials or 15 seconds lapsed. <br>
+          4. Unlock new levels every 20 questions. <br>
+          5. Score is tallied on game over or when the game finished.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Gameplay</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+          1. Answer questions to go to the next one. <br>
+          2. Player looses 1 trial on every wrong answer.
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div class="btn-holder" (click)="navigate('/quiz-game')">
+    <ion-button color="success" class="start-btn">
+      <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+      Play Now
+    </ion-button>
+  </div>
+
+  <div class="btn-holder" (click)="navigate('/home')">
+    <ion-button color="danger" class="start-btn">
+      <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+      Exit
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,22 +1,58 @@
 <ion-content [fullscreen]="true">
 
   <div id="container">
-    <div class="space"></div> 
-    <h3 class="center">
-      Welcome! <br>Please select a game.
-    </h3>
-    <div class="space"></div>
-    <ion-row>
-      <ion-button class="button" (click)="navigate('/two-pics')">
-        2 pics 1 word
+    <div class="container-1">
+      <h3 class="title no-margin">
+        <div>
+          GotPH:
+        </div>
+        <div>
+          Game of the
+        </div>
+        <div>
+          Philippine History
+        </div>
+      </h3>
+
+      <div class="icon-whole-holder">
+        <div class="icon-holder">
+          <!-- <div class="help-1">
+            <ion-icon name="help" color="light"></ion-icon>
+          </div>
+          <div class="help-2">
+            <ion-icon name="help" color="light"></ion-icon>
+          </div>
+          <div class="help-3">
+            <ion-icon name="help" color="light"></ion-icon>
+          </div>
+          <div class="help-4">
+            <ion-icon name="help" color="light"></ion-icon>
+          </div>
+          <div class="help-5">
+            <ion-icon name="help" color="light"></ion-icon>
+          </div> -->
+          <ion-icon class="icon" name="school"></ion-icon>
+          <div class="icon-title">
+            QUIZ
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="btn-holder" (click)="navigate('/quiz-game')">
+      <ion-button color="success" class="start-btn">
+        <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+        Play Now
       </ion-button>
-    </ion-row>
-    <div class="space"></div>
-    <ion-row>
-      <ion-button class="button" (click)="navigate('/quiz-game')">
-        quiz game
+    </div>
+
+    <div class="btn-holder" (click)="navigate('/instructions')">
+      <ion-button color="primary" class="start-btn">
+        <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+        How to Play
       </ion-button>
-    </ion-row>
+    </div>
     
   </div>
 </ion-content>

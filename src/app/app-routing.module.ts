@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'quiz-game',
     loadChildren: () => import('./quiz-game/quiz-game.module').then( m => m.QuizGamePageModule)
   },
+  {
+    path: 'game-over/:score',
+    loadChildren: () => import('./game-over/game-over.module').then( m => m.GameOverPageModule)
+  },
+  {
+    path: 'instructions',
+    loadChildren: () => import('./instructions/instructions.module').then( m => m.InstructionsPageModule)
+  },
 ];
 
 @NgModule({

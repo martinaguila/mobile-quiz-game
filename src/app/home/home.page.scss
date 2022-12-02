@@ -1,40 +1,89 @@
-// header
-.top-header{
-  --background: #232b2b;
-}
-
+// body
 .title{
   text-align: center;
+  color: beige;
+  font-size: 40px;
   font-weight: bold;
-  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: "Super Game";
 }
 
-.home-icon{
-  color: white;
+.container{
+  height: 100%;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.container-1{
+  // height: 160vw;
+  // background: linear-gradient(0deg, rgb(94, 71, 57), rgb(91, 57, 48) 80%) no-repeat;
+  background: rgb(138, 98, 73);
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  position: relative;
+}
+
+.help-1, .help-2, .help-3, .help-4, .help-5{
+  font-size: 50px;
+  font-weight: bolder;
   position: absolute;
-  right: 5%;
 }
 
-.nav-icon{
-  color: white;
-  position: absolute;
-  left: 2%;
-  top: 8%;
-  width: 36px;
-  z-index: 100;
+.help-1{
+  left: 40;
 }
 
-// body
-.center{
-  text-align: center;
+.help-5 {
+  top: 61%;
+  left: 17%;
+  transform: rotate(45deg);
 }
 
-.button{
-  width: 70%;
+.help-4{
+  top: 58%;
+  left: 68%;
+  transform: rotate(-200deg);
+}
+
+.icon-whole-holder{
+  padding-bottom: 10vw;
+}
+
+.icon-holder{
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  width: 150px;
+  background: rgb(88, 46, 24);
+  border-radius: 25px;
+  position: relative;
 }
 
-.space{
+.icon{
+  color: beige;
+  font-size: 80px;
+}
+
+.icon-title{
+  color: beige;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-holder{
+  text-align: center;
+  margin-top: 15vw;
+}
+
+.start-btn{
   height: 50px;
+  width: 82%;
+  --border-radius: 10px;
+  font-size: 20px;
+  margin-left: auto;
+  text-transform: none;
+  font-family: "Super Game";
 }

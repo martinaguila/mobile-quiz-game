@@ -16,10 +16,6 @@ export class HomePage {
 
   }
 
-  public toHome(){
-    // this.router.navigate(['/tabs/tab1'])
-  }
-
   public navigate(page: string): void{
     this.router.navigate([page]);  
   }

@@ -1,37 +1,97 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="top-header">
-    <ion-menu-button class="nav-icon"></ion-menu-button>
-    <ion-title class="title">
-      Mobile App Games
-    </ion-title>
-    <ion-icon class="home-icon" (click)="toHome()" name="home" slot="end"></ion-icon>
-  </ion-toolbar>
-</ion-header>
+<ion-row class="top-header">
+  <ion-col size="3">
+    <ion-icon class="back-btn" name="arrow-back" (click)="toHome()"></ion-icon>
+  </ion-col>
+  <ion-col class="center timer">
+    {{timeLeft}}
+  </ion-col>
+  <ion-col size="3" class="align-right relative">
+    <ion-icon class="heart-btn" name="heart"></ion-icon>
+    <span class="trial">{{trials}}</span>
+  </ion-col>
+</ion-row>
 
-<ion-content>
+<ion-content class="content">
 
-  <h3>
-    Select the correct answer.
-  </h3>
+  <div class="question-holder">
+    <!-- <div *ngFor="let quest of quizesArr" class="question-title">
+      <span *ngIf="quest.is_active">Question {{quest.question_number}} of {{quizesArr.length}}</span>
+
+      <div *ngIf="quest.is_active" class="question">
+        {{quest.question}}
+      </div>
+    </div> -->
+
+    <div class="question-title">
+      <span>Question {{_aNumber}} of {{quizesArr.length}}</span>
+
+      <div class="question">
+        {{_aQuestion}}
+      </div>
+    </div>
+
+    
+  </div>
 
   <div *ngFor="let quiz of quizesArr">
     <div *ngIf="quiz.is_active">
-      <ion-row>
-        {{quiz.question_number}}. {{quiz.question}}
-      </ion-row>
-      <ion-list>
-        <ion-radio-group value="quiz_options">
-          <ion-item *ngFor="let opts of quiz.selection">
-            <ion-label>{{opts.value}}</ion-label>
-            <ion-radio slot="end" value="{{opts.letter}}"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+      <ion-button class="selection-btn" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter)">
+        {{selection.value}}
+      </ion-button>
     </div>
   </div>
-  
-  <ion-row >
-    <div class="timer">{{timeLeft}}</div>
-  </ion-row>
+
+  <ion-button id="open-modal" expand="block">Open Modal</ion-button>
+
+  <ion-modal #modal trigger="open-modal">
+      <ng-template>
+        <ion-content>
+          <ion-toolbar>
+            <ion-title>Modal</ion-title>
+            <ion-buttons slot="end">
+              <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Connor Smith</h2>
+                <p>Sales Rep</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Daniel Smith</h2>
+                <p>Product Designer</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Greg Smith</h2>
+                <p>Director of Operations</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Zoey Smith</h2>
+                <p>CEO</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 
 </ion-content>

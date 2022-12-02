@@ -1,0 +1,43 @@
+.container{
+  height: 100%;
+  background: rgb(138, 98, 73);
+  padding: 0;
+  position: relative;
+  padding: 20% 10%;
+}
+
+.game-over-holder{
+  background: white;
+  height: 100%;
+  border-radius: 60px;
+}
+
+.title{
+  font-family: "Super Game";
+  font-size: 65px;
+  text-align: center;
+  color: rgb(88, 46, 24);;
+}
+
+.score{
+  font-family: "Super Game";
+  font-size: 50px;
+  text-align: center;
+  color: rgb(88, 46, 24);
+}
+
+.btn-holder{
+  text-align: center;
+  margin-top: 10vw;
+}
+
+.start-btn{
+  height: 50px;
+  width: 82%;
+  --border-radius: 10px;
+  font-size: 20px;
+  margin-left: auto;
+  text-transform: none;
+  font-family: "Super Game";
+  color: white;
+}

@@ -1,0 +1,23 @@
+.title{
+  font-family: "Super Game";
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  background: rgb(88, 46, 24);
+  padding: 20px 0;
+}
+
+.btn-holder{
+  text-align: center;
+  margin-top: 10vw;
+}
+
+.start-btn{
+  height: 50px;
+  width: 82%;
+  --border-radius: 10px;
+  font-size: 20px;
+  margin-left: auto;
+  text-transform: none;
+  font-family: "Super Game";
+}
