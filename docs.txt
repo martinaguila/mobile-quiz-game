@@ -1,0 +1,15 @@
+game
+
+easy level
+
+Home page -> Game title, Start button, Continue button
+
+Easy level
+1. Player has 3 trials to complete the easy level.
+2. Every question has 15 seconds to answer it.
+2. Player can only move to another question once answered the current question.
+3. If player answer is incorrect, player will loose 1 trial and it will move to next question.
+4. If player looses 3 trials, game is over and it will go back to home page.
+5. If player's timer reached to 0, game is over and it will go back to home page.
+
+ANDROID_HOME=C:\Users\martin aguila\AppData\Local\Android\sdk

@@ -1,5 +1,7 @@
 {
   "name": "4-pics-quiz",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

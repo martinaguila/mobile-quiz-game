@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1,
+    "question_number": 1,
+    "question": "Name the person who is known as the first editor of La Solidaridad.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Emilio Aguinaldo"
+      },
+      {
+        "letter": "b",
+        "value": "Graciano Lopez Jaena"
+      },
+      {
+        "letter": "c",
+        "value": "Marcelo H. Del Pilar"
+      }
+    ],
+    "is_active": true,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 2,
+    "question_number": 2,
+    "question": "What is the oldest city in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Quezon City"
+      },
+      {
+        "letter": "b",
+        "value": "Baguio City"
+      },
+      {
+        "letter": "c",
+        "value": "Cebu City"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 3,
+    "question_number": 3,
+    "question": "Who is the founder of KKK?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Apolinario Mabini"
+      },
+      {
+        "letter": "b",
+        "value": "Andres Bonifacio"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Rizal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 4,
+    "question_number": 4,
+    "question": "What is the first commercial bank established in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Citi Bank"
+      },
+      {
+        "letter": "b",
+        "value": "Allied Bank"
+      },
+      {
+        "letter": "c",
+        "value": "Bank of the Philippine Island"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 5,
+    "question_number": 5,
+    "question": "Who invaded the Philippines in February 1565?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ferdinand Magellan"
+      },
+      {
+        "letter": "b",
+        "value": "Miguel Lopez de Legazpi"
+      },
+      {
+        "letter": "c",
+        "value": "General Macarthur"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 6,
+    "question_number": 6,
+    "question": "It is considered as the earliest form of writing in the Philippines.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Baybayin"
+      },
+      {
+        "letter": "b",
+        "value": "Indus Script"
+      },
+      {
+        "letter": "c",
+        "value": "Cuneiform"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 7,
+    "question_number": 7,
+    "question": "Where did the name of the Philippines come from?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Queen Elizabeth"
+      },
+      {
+        "letter": "b",
+        "value": "King Phillip I"
+      },
+      {
+        "letter": "c",
+        "value": "King Phillip II"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 8,
+    "question_number": 8,
+    "question": "Who discovered the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ferdnand Magellan"
+      },
+      {
+        "letter": "b",
+        "value": "King Phillip II"
+      },
+      {
+        "letter": "c",
+        "value": "General Macarthur"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 9,
+    "question_number": 9,
+    "question": "What is the full name of Tandang Sora?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Melchora Aquino"
+      },
+      {
+        "letter": "b",
+        "value": "Melchora Bregilla Aquino"
+      },
+      {
+        "letter": "c",
+        "value": "Melchora Aquino de Ramos"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 10,
+    "question_number": 10,
+    "question": "Who led the longest revolt during Spanish time?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Andres Bonifacio"
+      },
+      {
+        "letter": "b",
+        "value": "Emilio Aguinaldo"
+      },
+      {
+        "letter": "c",
+        "value": "Francisco Dagohoy"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 11,
+    "question_number": 11,
+    "question": "Who was the first Philippine President born after the Spanish Colonial Era?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Carlos P. Garcia"
+      },
+      {
+        "letter": "b",
+        "value": "Elpidio Quirino"
+      },
+      {
+        "letter": "c",
+        "value": "Ramon Magsaysay"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 12,
+    "question_number": 12,
+    "question": "Who named the Philippines as Las Islas Filipinas?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ruy Lopez de Villalobos"
+      },
+      {
+        "letter": "b",
+        "value": "King Philip I"
+      },
+      {
+        "letter": "c",
+        "value": "Ferdinand Magellan"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 13,
+    "question_number": 13,
+    "question": "Who sewed the Philippine flag?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Delfina Herbosa de Natividad"
+      },
+      {
+        "letter": "b",
+        "value": "Lorenza Agoncillo"
+      },
+      {
+        "letter": "c",
+        "value": "All of them"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 14,
+    "question_number": 14,
+    "question": "Lupang Hinirang means",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "The Living Land"
+      },
+      {
+        "letter": "b",
+        "value": "The Chosen Land"
+      },
+      {
+        "letter": "c",
+        "value": "The Modern Land"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 15,
+    "question_number": 15,
+    "question": "Which of the following is the National flower of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Sampaguita"
+      },
+      {
+        "letter": "b",
+        "value": "Orchids"
+      },
+      {
+        "letter": "c",
+        "value": "Daisy"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 16,
+    "question_number": 16,
+    "question": "Who founded La Liga Filipina?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Apolinario Mabini"
+      },
+      {
+        "letter": "b",
+        "value": "Marcelo H. del Pilar"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Rizal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 17,
+    "question_number": 17,
+    "question": "She is known as the Grand woman of the Revolution.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Teodora Alonzo"
+      },
+      {
+        "letter": "b",
+        "value": "Corazon Aquino"
+      },
+      {
+        "letter": "c",
+        "value": "Melchora Aquino"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 18,
+    "question_number": 18,
+    "question": "Who was the 10th President of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Corazon Aquino"
+      },
+      {
+        "letter": "b",
+        "value": "Ferdinand Marcos"
+      },
+      {
+        "letter": "c",
+        "value": "Fidel V. Ramos"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 19,
+    "question_number": 19,
+    "question": "He arrived in Cebu in 1565 to establish the first Spanish settlement in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Miguel Lopez de Legazpi"
+      },
+      {
+        "letter": "b",
+        "value": "Ferdinand Magellan"
+      },
+      {
+        "letter": "c",
+        "value": "Ferdinand Marcos"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false
+  },
+
+  {
+    "id": 20,
+    "question_number": 20,
+    "question": "Who was the fifth President who served from 1946 until his death in 1948?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Elpidio Quirino"
+      },
+      {
+        "letter": "b",
+        "value": "Corazon Aquino"
+      },
+      {
+        "letter": "c",
+        "value": "Manuel Rozas"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false
+  }
+
+]

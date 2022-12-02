@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="top-header">
+    <ion-menu-button class="nav-icon"></ion-menu-button>
+    <ion-title class="title">
+      Mobile App Games
+    </ion-title>
+    <ion-icon class="home-icon" (click)="toHome()" name="home" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>
+    Select the correct answer.
+  </h3>
+
+  <div *ngFor="let quiz of quizesArr">
+    <div *ngIf="quiz.is_active">
+      <ion-row>
+        {{quiz.question_number}}. {{quiz.question}}
+      </ion-row>
+      <ion-list>
+        <ion-radio-group value="quiz_options">
+          <ion-item *ngFor="let opts of quiz.selection">
+            <ion-label>{{opts.value}}</ion-label>
+            <ion-radio slot="end" value="{{opts.letter}}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+  </div>
+  
+  <ion-row >
+    <div class="timer">{{timeLeft}}</div>
+  </ion-row>
+
+</ion-content>
