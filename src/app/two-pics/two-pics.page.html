@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="top-header">
-    <ion-menu-button class="nav-icon"></ion-menu-button>
-    <ion-title class="title">
-      Mobile App Games
-    </ion-title>
-    <ion-icon class="home-icon" (click)="toHome()" name="home" slot="end"></ion-icon>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="img-holder" *ngIf="level === 1">
+    <img class="img-1" src="../../assets/images/luzon.png" />
+  </div>
 
+  <div class="img-holder" *ngIf="level === 2">
+    <img class="img-1" src="../../assets/images/visayas.jpg" />
+  </div>
+
+  <div class="img-holder" *ngIf="level === 3">
+    <img class="img-1" src="../../assets/images/mindanao.jpg" />
+  </div>
+
+  <div class="img-holder" *ngIf="level === 4">
+    <img class="img-4" src="../../assets/images/philippines.jpg" />
+  </div>
+
+  <div class="title">
+    Congratulations! You unlocked the {{island}} map.
+  </div>
+
+  <div class="btn-holder" (click)="close()">
+    <ion-button *ngIf="level !== 4" color="success" class="start-btn">
+      Continue
+    </ion-button>
+    <ion-button *ngIf="level === 4" color="danger" class="start-btn">
+      Exit
+    </ion-button>
+  </div>
 </ion-content>

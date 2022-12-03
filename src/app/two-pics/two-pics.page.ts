@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +9,43 @@ import { Router } from '@angular/router';
 })
 export class TwoPicsPage implements OnInit {
 
+  @Input() level = 4;
+  item : any;
+  island: any;
+
   constructor(
-    private router: Router,
+    private modalCtr: ModalController,
+    private router: Router
   ) { }
 
   ngOnInit() {
-  }
+    if (this.level === 1){
+      this.island = "Luzon";
+    }
 
-  public toHome(): void{
-    this.router.navigate([""]);  
+    if (this.level === 2){
+      this.island = "Visayas";
+    }
+
+    if (this.level === 3){
+      this.island = "Mindanao";
+    }
+   }
+
+  async close() {
+    if (this.level === 3){
+      this.level = 4;
+      this.island = "Pilippine";
+    }
+
+    else if (this.level === 4){
+      this.router.navigate(['/home']);
+      this.modalCtr.dismiss("reset");
+    }
+
+    else{
+      this.modalCtr.dismiss("continue");
+    }
   }
 
 }

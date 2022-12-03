@@ -1,6 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import quizes from '../../assets/quiz-data/quizes.json';
+import { ModalController } from '@ionic/angular';
+import { TwoPicsPage } from '../two-pics/two-pics.page';
+
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quiz-game',
@@ -23,10 +27,11 @@ export class QuizGamePage implements OnInit {
 
   constructor(
     private router: Router,
+    public modalCtrl: ModalController,
+    public popoverCtrl: PopoverController
   ) { }
 
   ngOnInit() {
-    console.log(quizes)
     this.timeLeft = 15;
     // pass the json file to variable
     this.quizesArr = quizes;
@@ -102,7 +107,21 @@ export class QuizGamePage implements OnInit {
 
       // set display of questions
       this.setQuestionDisplay();
-      console.log(this.quizesArr)
+
+      if (correctAnswer[0].id === 20 || 
+          correctAnswer[0].id === 40 ||
+          correctAnswer[0].id === 60
+        ){
+          this.openModal(correctAnswer[0].id);
+      }
+
+      // for testing only
+      // if (correctAnswer[0].id === 1 || 
+      //   correctAnswer[0].id === 2 ||
+      //   correctAnswer[0].id === 3
+      // ){
+      //   this.openModal(correctAnswer[0].id);
+      // }
     }else{
       // answer is incorrect
 
@@ -132,7 +151,21 @@ export class QuizGamePage implements OnInit {
 
       // set display of questions
       this.setQuestionDisplay();
-      console.log(this.quizesArr)
+
+      if (correctAnswer[0].id === 20 || 
+          correctAnswer[0].id === 40 ||
+          correctAnswer[0].id === 60
+        ){
+          this.openModal(correctAnswer[0].id);
+      }
+
+      // for testing only
+      // if (correctAnswer[0].id === 1 || 
+      //   correctAnswer[0].id === 2 ||
+      //   correctAnswer[0].id === 3
+      // ){
+      //   this.openModal(correctAnswer[0].id);
+      // }
     }
   }
 
@@ -141,6 +174,52 @@ export class QuizGamePage implements OnInit {
     this.trials = 3;
     this.totalScore = 0;
     this.activeQuestion = 0;
+  }
+
+  async openModal(id) {
+    let level;
+    if (id === 20){
+      level = 1;
+    }
+    if (id === 40){
+      level = 2;
+    }
+    if (id === 60){
+      level = 3;
+    }
+
+    // for testing only
+    // if (id === 1){
+    //   level = 1;
+    // }
+    // if (id === 2){
+    //   level = 2;
+    // }
+    // if (id === 3){
+    //   level = 3;
+    // }
+
+    this.timeLeft = 15;
+    clearInterval(this.interval); 
+
+    const modal = await this.modalCtrl.create({
+      component: TwoPicsPage,
+      cssClass: 'small-modal',
+      componentProps: {
+        'level': level
+      }
+    });
+
+    modal.onDidDismiss().then((result) => {
+      if (result.data === "continue"){
+        this.startTimer();
+      }
+      
+    });
+
+    return await modal.present();
+    /** Sync event from popover component */
+
   }
 
 }
