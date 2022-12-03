@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
+  musicOn: boolean = true;
+  icon: string = "volume-high";
+  color: string = "success";
+
   constructor(
     private router: Router,
   ) {}
@@ -18,6 +22,18 @@ export class HomePage {
 
   public navigate(page: string): void{
     this.router.navigate([page]);  
+  }
+
+  audio(){
+    this.musicOn = !this.musicOn;
+
+    if (this.musicOn){
+      this.icon = "volume-high";
+      this.color = "success";
+    }else{
+      this.icon = "volume-off";
+      this.color = "danger";
+    }
   }
 
 }

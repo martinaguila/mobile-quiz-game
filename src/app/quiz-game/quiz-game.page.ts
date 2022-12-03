@@ -35,6 +35,7 @@ export class QuizGamePage implements OnInit {
     this.timeLeft = 15;
     // pass the json file to variable
     this.quizesArr = quizes;
+    console.log(this.quizesArr)
     this.setQuestionDisplay();
   }
 
@@ -82,6 +83,7 @@ export class QuizGamePage implements OnInit {
   public onClickAnswer(ans: string): void{
     // get the active question
     // use this to compare the correct answer and get the active id
+    // correctAnswer is the current question displayed
     let correctAnswer = this.quizesArr.filter(x=>x.is_active === true);
 
     // handling if selected letter is correct
@@ -89,13 +91,14 @@ export class QuizGamePage implements OnInit {
       // answer is correct
       this.totalScore = this.totalScore + 1;
 
-      // add 1 to the id to get the next question id
+      // add 1 to the current id to get the next question id
       let nextQuestionId = correctAnswer[0].id + 1;
 
       // update the current question's active to false 
       correctAnswer[0].is_active = false;
 
       // update the is_answer_correct property. this will tally for the total correct answers
+      // currently not using this method
       correctAnswer[0].is_answer_correct = true;
 
       // get the data of new question and update the is_active to true to display it
@@ -108,6 +111,7 @@ export class QuizGamePage implements OnInit {
       // set display of questions
       this.setQuestionDisplay();
 
+      // display map
       if (correctAnswer[0].id === 20 || 
           correctAnswer[0].id === 40 ||
           correctAnswer[0].id === 60
@@ -136,7 +140,7 @@ export class QuizGamePage implements OnInit {
         return;
       }
 
-      // add 1 to the id to get the next question id
+      // add 1 to the current id to get the next question id
       let nextQuestionId = correctAnswer[0].id + 1;
 
       // update the current question's active to false 
@@ -152,6 +156,7 @@ export class QuizGamePage implements OnInit {
       // set display of questions
       this.setQuestionDisplay();
 
+      // display map
       if (correctAnswer[0].id === 20 || 
           correctAnswer[0].id === 40 ||
           correctAnswer[0].id === 60

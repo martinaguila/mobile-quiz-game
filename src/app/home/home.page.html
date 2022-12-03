@@ -51,6 +51,15 @@
         How to Play
       </ion-button>
     </div>
-    
+
+    <div class="audio-holder">
+      <ion-button class="audio-btn" (click)="audio()" color="{{color}}">
+        <ion-icon slot="icon-only" name="{{icon}}"></ion-icon>
+      </ion-button>
+    </div>
+
+    <audio *ngIf="musicOn" src="../../assets/audio/GotPH_sounds.mp3" autoplay loop></audio>
+    <audio *ngIf="!musicOn" src="../../assets/audio/GotPH_sounds.mp3" muted></audio>
+
   </div>
 </ion-content>
