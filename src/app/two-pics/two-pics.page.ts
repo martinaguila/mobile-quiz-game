@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TwoPicsPage implements OnInit {
 
-  @Input() level = 4;
+  @Input() level = 0;
   item : any;
   island: any;
 

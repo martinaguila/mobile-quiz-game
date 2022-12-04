@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,10 +14,12 @@ export class HomePage {
 
   constructor(
     private router: Router,
-  ) {}
+  ) {
+    console.log("test",this.musicOn)
+  }
 
   ngOninit(){
-
+    console.log("test",this.musicOn)
   }
 
   public navigate(page: string): void{

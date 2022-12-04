@@ -35,8 +35,23 @@ export class QuizGamePage implements OnInit {
     this.timeLeft = 15;
     // pass the json file to variable
     this.quizesArr = quizes;
-    console.log(this.quizesArr)
-    this.setQuestionDisplay();
+    console.log(quizes,this.quizesArr.length)
+
+    // do not display question if current question is last one
+    let currentId = this.quizesArr.filter(x=>x.is_active === true);
+    console.log(currentId)
+    if (currentId.length > 0){
+      this.setQuestionDisplay();
+    }
+
+    // reset question
+    if (currentId.length === 0){
+      this.quizesArr = quizes;
+      this.trials = 3;
+      this.totalScore = 0;
+      this.activeQuestion = 0;
+      this.setQuestionDisplay();
+    }
   }
 
   ionViewDidEnter(){
@@ -48,16 +63,40 @@ export class QuizGamePage implements OnInit {
 
     // set data to default state
     let currentId = this.quizesArr.filter(x=>x.is_active === true);
-    this.quizesArr[currentId[0].id - 1].is_active = false;
-    this.quizesArr[0].is_active = true;
-    this.setQuestionDisplay();
+    console.log(currentId)
+
+    // do not display question if current question is last one
+    if (currentId.length > 0){
+      this.quizesArr[currentId[0].id - 1].is_active = false;
+      this.quizesArr[0].is_active = true;
+      this.setQuestionDisplay();
+    }
+
+    // reset question
+    if (currentId.length === 0){
+      this.quizesArr = quizes;
+      this.trials = 3;
+      this.totalScore = 0;
+      this.activeQuestion = 0;
+      this.setQuestionDisplay();
+    }
   }
 
   setQuestionDisplay(){
     // display question which is active
+    console.log(this.quizesArr)
     let nQuestion = this.quizesArr.filter(x=>x.is_active === true);
-    this._aQuestion = nQuestion[0].question;
-    this._aNumber = nQuestion[0].question_number;
+    console.log("nQuestion",nQuestion)
+
+    // set question to default
+    if (nQuestion.length === 0){
+      this.quizesArr[0].is_active = true;
+      this._aQuestion = this.quizesArr[0].question;
+      this._aNumber = this.quizesArr[0].question_number;
+    }else{
+      this._aQuestion = nQuestion[0].question;
+      this._aNumber = nQuestion[0].question_number;
+    }
   }
 
   startTimer() {
@@ -91,8 +130,13 @@ export class QuizGamePage implements OnInit {
       // answer is correct
       this.totalScore = this.totalScore + 1;
 
+      let nextQuestionId;
+
       // add 1 to the current id to get the next question id
-      let nextQuestionId = correctAnswer[0].id + 1;
+      // do not apply on last number
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        nextQuestionId = correctAnswer[0].id + 1;
+      }
 
       // update the current question's active to false 
       correctAnswer[0].is_active = false;
@@ -102,14 +146,17 @@ export class QuizGamePage implements OnInit {
       correctAnswer[0].is_answer_correct = true;
 
       // get the data of new question and update the is_active to true to display it
-      let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-      nextQuestion[0].is_active = true;
+      // do not apply on last question
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
+        nextQuestion[0].is_active = true;
+
+        // set display of questions
+        this.setQuestionDisplay();
+      }
 
       // restart timer to 15 seconds
       this.timeLeft = 15;
-
-      // set display of questions
-      this.setQuestionDisplay();
 
       // display map
       if (correctAnswer[0].id === 20 || 
@@ -140,21 +187,29 @@ export class QuizGamePage implements OnInit {
         return;
       }
 
+      let nextQuestionId;
+
       // add 1 to the current id to get the next question id
-      let nextQuestionId = correctAnswer[0].id + 1;
+      // do not apply on last number
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        nextQuestionId = correctAnswer[0].id + 1;
+      }
 
       // update the current question's active to false 
       correctAnswer[0].is_active = false;
 
       // get the data of new question and update the is_active to true to display it
-      let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-      nextQuestion[0].is_active = true;
+      // do not apply on last question
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
+        nextQuestion[0].is_active = true;
+
+        // set display of questions
+        this.setQuestionDisplay();
+      }
 
       // restart timer to 15 seconds
       this.timeLeft = 15;
-
-      // set display of questions
-      this.setQuestionDisplay();
 
       // display map
       if (correctAnswer[0].id === 20 || 
