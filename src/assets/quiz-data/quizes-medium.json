@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question_number": 1,
+    "question": "What is the english translation of El Filibusterismo?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "The Reign of Power"
+      },
+      {
+        "letter": "b",
+        "value": "The Reign of Death"
+      },
+      {
+        "letter": "c",
+        "value": "The Reign of Greed"
+      }
+    ],
+    "is_active": true,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "El Filibusterismo, also known by its alternative English title The Reign of Greed, is the second novel written by Philippine national hero José Rizal."
+  },
+
+  {
+    "id": 2,
+    "question_number": 2,
+    "question": "The First real battle fought between Filipinos and the Spaniards is known as?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Majayjay"
+      },
+      {
+        "letter": "b",
+        "value": "Pugad Lawin"
+      },
+      {
+        "letter": "c",
+        "value": "Montalban"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "The Battle of San Juan del Monte also referred to 'Battle of Pinaglabanan' took place on August 30, 1896. It is considered as the first major battle of the Philippine Revolution, which sought Philippine independence from Spain."
+  },
+
+  {
+    "id": 3,
+    "question_number": 3,
+    "question": "What did the First Philippine Republic come to be called?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Biak-na-bato Republic"
+      },
+      {
+        "letter": "b",
+        "value": "Sakay Republic"
+      },
+      {
+        "letter": "c",
+        "value": "Malolos Republic"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "Following the declaration of the First Philippine Republic, popularly known as the Malolos Republic, on January 23, 1899, the Philippines became an independent nation governed by its own citizens."
+  },
+
+  {
+    "id": 4,
+    "question_number": 4,
+    "question": "She was the first woman member of the katipunan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Gregoria De Jesus"
+      },
+      {
+        "letter": "b",
+        "value": "Melchora Aquino"
+      },
+      {
+        "letter": "c",
+        "value": "Maria Dizon"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "The first woman to become a member of the Katipunan was Gregoria de Jesús, wife of Bonifacio. Her codename was Lakambini (Princess)."
+  },
+
+  {
+    "id": 5,
+    "question_number": 5,
+    "question": "For how many years did Spanish rule last in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "235 years"
+      },
+      {
+        "letter": "b",
+        "value": "108 years"
+      },
+      {
+        "letter": "c",
+        "value": "333 years"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "Philippines Under Spanish Rule, 1565-1898 (333 years)"
+  },
+
+  {
+    "id": 6,
+    "question_number": 6,
+    "question": "Who invaded the Philippines in February 1565?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ferdinand Magellan"
+      },
+      {
+        "letter": "b",
+        "value": "Miguel Lopez de Legazpi"
+      },
+      {
+        "letter": "c",
+        "value": "General Macarthur"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Forty-four years later, a Spanish expedition led by Miguel López de Legazpi left modern Mexico and began the Spanish conquest of the Philippines."
+  },
+
+  {
+    "id": 7,
+    "question_number": 7,
+    "question": "Who designed the Philippine National Flag?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Andres Bonifacio"
+      },
+      {
+        "letter": "b",
+        "value": "Apolinario Mabini"
+      },
+      {
+        "letter": "c",
+        "value": "Emilio Aguinaldo"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "It was personally conceived by Gen. Emilio Aguinaldo, President of the Revolutionary Government."
+  },
+
+  {
+    "id": 8,
+    "question_number": 8,
+    "question": "Lupang Hinirang means",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "The Living Land"
+      },
+      {
+        "letter": "b",
+        "value": "The Chosen Land"
+      },
+      {
+        "letter": "c",
+        "value": "The Modern Land"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Lupang Hinirang “The Chosen Land” is the national anthem of the Philippines. During the American Colonial Period, the Flag Law of 1907 prohibited public display of flags, banners, emblems, or devices used by revolutionaries in the Philippine-American War."
+  },
+  
+  {
+    "id": 9,
+    "question_number": 9,
+    "question": "Name the person who is known as the first editor of La Solidaridad.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Emilio Aguinaldo"
+      },
+      {
+        "letter": "b",
+        "value": "Graciano Lopez Jaena"
+      },
+      {
+        "letter": "c",
+        "value": "Marcelo H. Del Pilar"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Its first editor was Graciano Lopez-Jaena but he was soon succeeded by Marcelo H. del Pilar. La Solidaridad was a political propaganda paper with a liberal, reformist orientation dedicated to the task of fighting reaction in all its forms."
+  },
+  
+  {
+    "id": 10,
+    "question_number": 10,
+    "question": "Who discovered the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Ferdnand Magellan"
+      },
+      {
+        "letter": "b",
+        "value": "King Phillip II"
+      },
+      {
+        "letter": "c",
+        "value": "General Macarthur"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "El Filibusterismo, also known by its alternative English title The Reign of Greed, is the second novel written by Philippine national hero José Rizal."
+  }
+]
+ 

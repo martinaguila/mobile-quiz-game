@@ -1,0 +1,241 @@
+[
+  {
+    "id": 1,
+    "question_number": 1,
+    "question": "Who found 'Diariong Tagalog'?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Juan Luna"
+      },
+      {
+        "letter": "b",
+        "value": "Marcelo del Pilar"
+      },
+      {
+        "letter": "c",
+        "value": "Pedro Laktaw"
+      }
+    ],
+    "is_active": true,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "It was founded by Marcelo del Pilar in 1882 and Francisco Calvo financed the printing of the newspaper. The “Diariong Tagalog” was the first to publish ideas that prompted government reform and also denounced the abuse of the smugglers."
+  },
+
+  {
+    "id": 2,
+    "question_number": 2,
+    "question": "After the death of her husband Andres Bonifacio, Gregoria de Jesus was later married to whom?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Macario Sakay"
+      },
+      {
+        "letter": "b",
+        "value": "Santiago Alvarez"
+      },
+      {
+        "letter": "c",
+        "value": "Julio Nakpil"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "After the death of Bonifacio, she married Julio Nakpil, one of the generals of the revolution."
+  },
+
+  {
+    "id": 3,
+    "question_number": 3,
+    "question": "How old was Jose Rizal when he was executed?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "45"
+      },
+      {
+        "letter": "b",
+        "value": "50"
+      },
+      {
+        "letter": "c",
+        "value": "35"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "His advocacy for reforms in the Philippines under the hands of Spanish colonial authorities led to his early death at the age of 35. He was executed in Bagumbayan, now called Luneta, in Manila on December 30, 1896."
+  },
+
+  {
+    "id": 4,
+    "question_number": 4,
+    "question": "What is Jose Rizal’s full name?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "José Protacio Rizal Mercado y Alonso Realonda"
+      },
+      {
+        "letter": "b",
+        "value": "José Protacio Rizal y Mercado Alonso Realonda"
+      },
+      {
+        "letter": "c",
+        "value": "José Protacio Rizal Mercado Alonso y Realonda"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "José Rizal, in full José Protasio Rizal Mercado y Alonso Realonda. A patriot, physician, and man of letters who was an inspiration to the Philippine nationalist movement."
+  },
+  
+  {
+    "id": 5,
+    "question_number": 5,
+    "question": "When was Jose Rizal born?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "June 19, 1851"
+      },
+      {
+        "letter": "b",
+        "value": "June 19, 1861"
+      },
+      {
+        "letter": "c",
+        "value": "June 19, 1860"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "José Rizal born June 19, 1861, Calamba, Philippines. Died December 30, 1896, Manila."
+  },
+  
+  {
+    "id": 6,
+    "question_number": 6,
+    "question": "Who killed Magellan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Lapu-Lapu"
+      },
+      {
+        "letter": "b",
+        "value": "Sampong Bahâ"
+      },
+      {
+        "letter": "c",
+        "value": "Rajah Sulayman"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Sampong Bahâ, the person who actually killed Ferdinand Magellan was a Boholano, he was from Tubigon Bohol. Antonio Pigafetta recorded an eyewitness account during the death of Magellan. He said, “He (Magellan) was hit by an arrow on the thigh near the knee."
+  },
+
+  {
+    "id": 7,
+    "question_number": 7,
+    "question": "Where does Magellan come from?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Spain"
+      },
+      {
+        "letter": "b",
+        "value": "Portugal"
+      },
+      {
+        "letter": "c",
+        "value": "Germany"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Ferdinand Magellan was a Portuguese explorer who is credited with masterminding the first expedition to circumnavigate the world."
+  },
+  
+  {
+    "id": 8,
+    "question_number": 8,
+    "question": "Taga-ilog was the pen name which was associated with?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Juan Luna"
+      },
+      {
+        "letter": "b",
+        "value": "Antonio Luna"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Ma. Panganiban"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Taga-Ilog was also the pseudonym used by General Antonio Luna of revolutionary fame."
+  },
+
+  {
+    "id": 9,
+    "question_number": 9,
+    "question": "What was the first book published in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "El Filibusterismo"
+      },
+      {
+        "letter": "b",
+        "value": "Noli Me Tangere"
+      },
+      {
+        "letter": "c",
+        "value": "Doctrina Christiana"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "Doctrina Christiana is the first book printed in the Philippines, Manila, 1593."
+  },
+
+  {
+    "id": 10,
+    "question_number": 10,
+    "question": "What were the last words of Rizal before he died?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Consummatum est"
+      },
+      {
+        "letter": "b",
+        "value": "Adiós a ti"
+      },
+      {
+        "letter": "c",
+        "value": "Hasta otra vez"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "'Consummatum Est' (It is finished) were Rizal's last words during his execution by firing squad in Bagumbayan on December 30, 1896. His words are said to have been the same ones used by Jesus Christ shortly before he died of crucifixion."
+  }
+]

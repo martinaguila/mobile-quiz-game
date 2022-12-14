@@ -2,8 +2,9 @@
 
   <div id="container">
     <div class="container-1">
-      <h3 class="title no-margin">
-        <div>
+      <h1 class="title no-margin blazing">
+        GotPH: Game of the Philippine History
+        <!-- <div>
           GotPH:
         </div>
         <div>
@@ -11,8 +12,8 @@
         </div>
         <div>
           Philippine History
-        </div>
-      </h3>
+        </div> -->
+      </h1>
 
       <div class="icon-whole-holder">
         <div class="icon-holder">
@@ -40,7 +41,7 @@
       
     </div>
 
-    <div class="btn-holder" (click)="navigate('/quiz-game')">
+    <div class="btn-holder" (click)="navigate('/select-category')">
       <ion-button color="success" class="start-btn">
         Play Now
       </ion-button>
@@ -58,8 +59,13 @@
       </ion-button>
     </div>
 
-    <audio *ngIf="musicOn" src="../../assets/audio/GotPH_sounds.mp3" autoplay loop></audio>
-    <audio *ngIf="!musicOn" src="../../assets/audio/GotPH_sounds.mp3" muted></audio>
+    <!-- <audio *ngIf="musicOn" src="../../assets/audio/GotPH_sounds.mp3" autoplay loop></audio> -->
+    <!-- <audio *ngIf="!musicOn" src="../../assets/audio/GotPH_sounds.mp3" muted></audio> -->
+
+    <audio id="gameAudio" autoplay loop>
+      <source src="../../assets/audio/GotPH_sounds.mp3" type="audio/mp3">
+    </audio>
+
 
   </div>
 </ion-content>

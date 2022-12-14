@@ -15,11 +15,9 @@ export class HomePage {
   constructor(
     private router: Router,
   ) {
-    console.log("test",this.musicOn)
   }
 
   ngOninit(){
-    console.log("test",this.musicOn)
   }
 
   public navigate(page: string): void{
@@ -29,10 +27,16 @@ export class HomePage {
   audio(){
     this.musicOn = !this.musicOn;
 
+    var music = document.getElementById("gameAudio") as HTMLAudioElement;
+    
     if (this.musicOn){
+      music.play();
+
       this.icon = "volume-high";
       this.color = "success";
     }else{
+      music.pause();
+
       this.icon = "volume-off";
       this.color = "danger";
     }

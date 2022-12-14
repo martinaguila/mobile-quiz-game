@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'instructions',
     loadChildren: () => import('./instructions/instructions.module').then( m => m.InstructionsPageModule)
   },
+  {
+    path: 'select-category',
+    loadChildren: () => import('./select-category/select-category.module').then( m => m.SelectCategoryPageModule)
+  },
+  {
+    path: 'new-quiz/:category',
+    loadChildren: () => import('./new-quiz/new-quiz.module').then( m => m.NewQuizPageModule)
+  },
 ];
 
 @NgModule({

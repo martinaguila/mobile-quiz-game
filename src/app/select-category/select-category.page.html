@@ -1,0 +1,43 @@
+<ion-content class="content">
+  <ion-row class="header">
+    <ion-col size="3">
+      <div class="icon-holder" (click)="navigate('/home')">
+        <ion-icon class="back-icon" name="arrow-back-outline"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="6">
+      <div class="title">
+        Challenge Quiz
+      </div>
+    </ion-col>
+    <ion-col size="3">
+
+    </ion-col>
+  </ion-row>
+  
+  <div class="body">
+    <div class="name-holder">
+      <div class="name">GOTPH</div>
+    </div>
+
+    <div class="button-holder">
+      <ion-button color="primary" class="select-btn" (click)="navigate('/new-quiz/','easy')">
+        Easy
+      </ion-button>
+
+      <ion-button color="success" class="select-btn" (click)="navigate('/new-quiz/','medium')">
+        Medium
+      </ion-button>
+
+      <ion-button color="danger" class="select-btn" (click)="navigate('/new-quiz/','hard')">
+        Hard
+      </ion-button>
+    </div>
+
+    <div class="oval">
+        <!-- <div class="name">GOTPH</div> -->
+    </div>
+  </div>
+  
+
+</ion-content>
