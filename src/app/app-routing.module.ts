@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./quiz-game/quiz-game.module').then( m => m.QuizGamePageModule)
   },
   {
-    path: 'game-over/:score',
+    path: 'game-over/:status',
     loadChildren: () => import('./game-over/game-over.module').then( m => m.GameOverPageModule)
   },
   {

@@ -9,7 +9,7 @@
 }
 
 .title{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 20px;
   text-align: center;
   color: rgb(88, 46, 24);
@@ -40,7 +40,7 @@
 // }
 .name-holder{
   position: absolute;
-  top: 32%;
+  top: 27%;
   // transform: translate(-50%, -50%);
   z-index: 100;
   width: 100%;
@@ -48,7 +48,7 @@
 }
 
 .name{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 40px;
   text-shadow: -3px 0 #fff, 0 3px #fff, 3px 0 #fff, 0 -3px #fff;
 }
@@ -59,7 +59,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 30%;
+  height: 40%;
   background: white;
   border-radius: 100%;
   z-index: -1;
@@ -68,13 +68,13 @@
 
 .button-holder{
   position: absolute;
-  top: 42%;
+  top: 38%;
   width: 100%;
   text-align: center;
 }
 
 .select-btn{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 20px;
   width: 60%;
   --border-radius: 100px;

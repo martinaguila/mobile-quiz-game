@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class TwoPicsPage implements OnInit {
 
-  @Input() level = 0;
+  @Input() isCorrect;
+  @Input() description;
   item : any;
   island: any;
 
@@ -19,32 +20,14 @@ export class TwoPicsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.level === 1){
-      this.island = "Luzon";
-    }
-
-    if (this.level === 2){
-      this.island = "Visayas";
-    }
-
-    if (this.level === 3){
-      this.island = "Mindanao";
-    }
+    console.log(this.isCorrect);
    }
 
   async close() {
-    if (this.level === 3){
-      this.level = 4;
-      this.island = "Pilippine";
-    }
-
-    else if (this.level === 4){
-      this.router.navigate(['/home']);
-      this.modalCtr.dismiss("reset");
-    }
-
-    else{
+    if (this.isCorrect){
       this.modalCtr.dismiss("continue");
+    }else{
+      this.modalCtr.dismiss("retain")
     }
   }
 

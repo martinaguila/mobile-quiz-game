@@ -1,16 +1,23 @@
-<!-- <ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true">
   <div class="container">
 
     <div class="game-over-holder">
-      <div class="title">
+      <div class="title" *ngIf="status === 'gameover'">
         Game <br>Over
       </div>
 
-      <div class="score">
-        Score {{score}}
+      <div class="title" *ngIf="status === 'finished'">
+        Great!
+        <div class="subtitle">
+          You finished the game
+        </div>
       </div>
+
+      <!-- <div class="score">
+        Score {{score}}
+      </div> -->
   
-      <div class="btn-holder" (click)="navigate('/quiz-game')">
+      <div class="btn-holder" (click)="navigate('/select-category')">
         <ion-button color="success" class="start-btn">
           Play Again
         </ion-button>
@@ -24,9 +31,5 @@
     </div>
 
   </div>
-</ion-content> -->
-
-<h1 contenteditable data-heading="Frozen">
-    GOTPH: Game of the Philippine History
-  </h1>
+</ion-content>
   

@@ -1,33 +1,76 @@
-.img-holder{
-  text-align: center;
+.body{
+  --background: linear-gradient(#fbebca, #f3cd7a) !important;
 }
 
-.img-1{
-  width: 70%;
-}
-
-.img-4{
-  width: 90%;
-  margin-top: 15px;
+.title-holder{
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title{
-  text-align: center;
-  font-family: "Super Game";
+  border: 2px solid #cdab5d;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "frozen";
+}
+
+.content{
+  background: #245827;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  border: 5px solid #9d6e39;  
+  margin: 25px;
   font-size: 20px;
-}
-
-.btn-holder{
   text-align: center;
-  margin-top: 10vw;
+  font-weight: 500;
 }
 
-.start-btn{
-  height: 50px;
-  width: 82%;
+.minus-heart-holder, .button-holder{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.minus-heart{
+  border-radius: 10px;
+  border: 5px solid #1c4e21;
+  background: linear-gradient(#f5f5a9,#81b930);
+}
+
+.heart-icon{
+  font-size: 90px;
+  position: absolute;
+  top: -46%;
+  color: #d11816;
+}
+
+.minus{
+  font-size: 30px;
+  color: white;
+  // font-size: 50px;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.button-holder{
+  margin-top: 30px;
+}
+
+.the-btn{
+  // height: 50px;
+  width: 100%;
   --border-radius: 10px;
   font-size: 20px;
-  margin-left: auto;
+  /* margin-left: auto; */
   text-transform: none;
-  font-family: "Super Game";
+  font-family: "frozen";
+  padding-left: 0;
+  padding-right: 0;
+  outline: none;
+  margin-bottom: 20px;
 }
+
+.btn:focus{
+  outline: none;
+}
+

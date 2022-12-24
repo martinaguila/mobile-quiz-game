@@ -8,15 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GameOverPage implements OnInit {
 
-  public score: any = "";
+  status: any;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.paramMap.subscribe(paramMap => {
-
-      this.score = paramMap.get("score")
+      this.status = paramMap.get("status")
     });
    }
 

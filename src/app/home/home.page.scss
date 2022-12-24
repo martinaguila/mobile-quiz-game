@@ -1,13 +1,8 @@
-@font-face {
-  font-family:'frozen'; 
-  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff');
-}
-
 // body
 .title{
   text-align: center;
   color: beige;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -24,7 +19,7 @@
     content: "GOTPH: Game of the Philippine History";
     position: absolute;
     left: 0;
-    top: 19.5%;
+    top: 20.5%;
     width: 100%;
     background: linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
     -webkit-background-clip: text;
@@ -120,7 +115,7 @@
   font-size: 20px;
   margin-left: auto;
   text-transform: none;
-  font-family: "Super Game";
+  font-family: "frozen";
 }
 
 .audio-holder{

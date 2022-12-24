@@ -35,7 +35,7 @@
 
   <div *ngFor="let quiz of quizesArr">
     <div *ngIf="quiz.is_active">
-      <ion-button class="selection-btn" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter)">
+      <ion-button class="selection-btn" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter, quiz.description)">
         {{selection.value}}
       </ion-button>
     </div>

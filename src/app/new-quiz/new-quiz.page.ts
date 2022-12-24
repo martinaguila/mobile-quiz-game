@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import easyQuestion from '../../assets/quiz-data/quizes-easy.json';
 import mediumQuestion from '../../assets/quiz-data/quizes-medium.json';
 import hardQuestion from '../../assets/quiz-data/quizes-hard.json';
+import { ModalController } from '@ionic/angular';
+import { TwoPicsPage } from '../two-pics/two-pics.page';
 
 @Component({
   selector: 'app-new-quiz',
@@ -26,17 +28,21 @@ export class NewQuizPage implements OnInit {
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private modalCtrl: ModalController
   ) { 
     this.activatedRoute.paramMap.subscribe(paramMap => {
 
       this.category = paramMap.get("category");
-      console.log(this.category)
     });
   }
 
   ngOnInit() {
     this.timeLeft = 15;
+
+    // start time
+    this.startTimer();
+
     // pass the json file to variable
     // display question depending on category selected
     if (this.category === 'easy'){
@@ -46,8 +52,6 @@ export class NewQuizPage implements OnInit {
     }else{
       this.quizesArr = hardQuestion
     }
-    
-    console.log(this.quizesArr,this.quizesArr.length)
 
     // do not display question if current question is last one
     let currentId = this.quizesArr.filter(x=>x.is_active === true);
@@ -71,11 +75,25 @@ export class NewQuizPage implements OnInit {
     }
   }
 
+  startTimer() {
+    // timer starts here
+    this.interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else{
+        // get current question
+        let currentQuestion = this.quizesArr.filter(x=>x.is_active === true);
+
+        // remove 1 to trials
+        this.trials = this.trials - 1;
+        this.openModal(false, currentQuestion[0].description)
+      }
+    },1000)
+  }
+
   setQuestionDisplay(){
     // display question which is active
-    console.log(this.quizesArr)
     let nQuestion = this.quizesArr.filter(x=>x.is_active === true);
-    console.log("nQuestion",nQuestion)
 
     // set question to default
     if (nQuestion.length === 0){
@@ -88,114 +106,72 @@ export class NewQuizPage implements OnInit {
     }
   }
 
-  public onClickAnswer(ans: string): void{
-    // // get the active question
-    // // use this to compare the correct answer and get the active id
-    // // correctAnswer is the current question displayed
-    // let correctAnswer = this.quizesArr.filter(x=>x.is_active === true);
+  public onClickAnswer(ans: string, desc: string): void{
+    // get the active question
+    // use this to compare the correct answer and get the active id
+    // correctAnswer is the current question displayed
+    let correctAnswer = this.quizesArr.filter(x=>x.is_active === true);
 
-    // // handling if selected letter is correct
-    // if (correctAnswer[0].correct_answer === ans){
-    //   // answer is correct
-    //   this.totalScore = this.totalScore + 1;
+    // handling if selected letter is correct
+    if (correctAnswer[0].correct_answer === ans){
+      // answer is correct
 
-    //   let nextQuestionId;
+      this.openModal(true, desc, correctAnswer)
+    }else{
+      // answer is incorrect
 
-    //   // add 1 to the current id to get the next question id
-    //   // do not apply on last number
-    //   if (correctAnswer[0].id !== this.quizesArr.length){
-    //     nextQuestionId = correctAnswer[0].id + 1;
-    //   }
+      // remove 1 to trials
+      this.trials = this.trials - 1;
 
-    //   // update the current question's active to false 
-    //   correctAnswer[0].is_active = false;
+      this.openModal(false, desc)
+    }
+  }
 
-    //   // update the is_answer_correct property. this will tally for the total correct answers
-    //   // currently not using this method
-    //   correctAnswer[0].is_answer_correct = true;
+  async openModal(isCorrect: boolean, desc: string, correctAnswer?: any) {
+    this.timeLeft = 15;
+    clearInterval(this.interval); 
 
-    //   // get the data of new question and update the is_active to true to display it
-    //   // do not apply on last question
-    //   if (correctAnswer[0].id !== this.quizesArr.length){
-    //     let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-    //     nextQuestion[0].is_active = true;
+    const modal = await this.modalCtrl.create({
+      component: TwoPicsPage,
+      cssClass: 'small-modal',
+      componentProps: {
+        'isCorrect': isCorrect,
+        'description': desc
+      },
+      backdropDismiss: false
+    });
 
-    //     // set display of questions
-    //     this.setQuestionDisplay();
-    //   }
+    modal.onDidDismiss().then((result) => {
+      if (result.data === "continue"){
+        // get the current question
+        let currentQuestion = this.quizesArr.filter(x=>x.is_active === true);
 
-    //   // restart timer to 15 seconds
-    //   this.timeLeft = 15;
+        // if id is 10, display the end modal
+        console.log(currentQuestion[0].id)
+        if (currentQuestion[0].id === 10){
+          this.router.navigate(['game-over/finished']);
+          this.timeLeft = 15;
+          clearInterval(this.interval); 
+          return;
+        }else{
+          this.startTimer();
+          this.setNextQuestion(correctAnswer)
+          this.setQuestionDisplay();
+        }
+      }else{
+        // game over if trials reached to 0
+        if (this.trials === 0){
+          this.router.navigate(['game-over/gameover']);
+          this.timeLeft = 15;
+          clearInterval(this.interval); 
+          return;
+        }else{
+          this.startTimer();
+        }
+      }
+    });
 
-    //   // display map
-    //   if (correctAnswer[0].id === 20 || 
-    //       correctAnswer[0].id === 40 ||
-    //       correctAnswer[0].id === 60
-    //     ){
-    //       this.openModal(correctAnswer[0].id);
-    //   }
-
-    //   // for testing only
-    //   // if (correctAnswer[0].id === 1 || 
-    //   //   correctAnswer[0].id === 2 ||
-    //   //   correctAnswer[0].id === 3
-    //   // ){
-    //   //   this.openModal(correctAnswer[0].id);
-    //   // }
-    // }else{
-    //   // answer is incorrect
-
-    //   // remove 1 to trials
-    //   this.trials = this.trials - 1;
-
-    //   // game over if trials reached to 0
-    //   if (this.trials === 0){
-    //     this.router.navigate(['game-over/' + this.totalScore]);
-    //     this.timeLeft = 15;
-    //     clearInterval(this.interval); 
-    //     return;
-    //   }
-
-    //   let nextQuestionId;
-
-    //   // add 1 to the current id to get the next question id
-    //   // do not apply on last number
-    //   if (correctAnswer[0].id !== this.quizesArr.length){
-    //     nextQuestionId = correctAnswer[0].id + 1;
-    //   }
-
-    //   // update the current question's active to false 
-    //   correctAnswer[0].is_active = false;
-
-    //   // get the data of new question and update the is_active to true to display it
-    //   // do not apply on last question
-    //   if (correctAnswer[0].id !== this.quizesArr.length){
-    //     let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-    //     nextQuestion[0].is_active = true;
-
-    //     // set display of questions
-    //     this.setQuestionDisplay();
-    //   }
-
-    //   // restart timer to 15 seconds
-    //   this.timeLeft = 15;
-
-    //   // display map
-    //   if (correctAnswer[0].id === 20 || 
-    //       correctAnswer[0].id === 40 ||
-    //       correctAnswer[0].id === 60
-    //     ){
-    //       this.openModal(correctAnswer[0].id);
-    //   }
-
-    //   // for testing only
-    //   // if (correctAnswer[0].id === 1 || 
-    //   //   correctAnswer[0].id === 2 ||
-    //   //   correctAnswer[0].id === 3
-    //   // ){
-    //   //   this.openModal(correctAnswer[0].id);
-    //   // }
-    // }
+    return await modal.present();
   }
 
   public toHome(): void{
@@ -203,6 +179,32 @@ export class NewQuizPage implements OnInit {
     this.router.navigate(["select-category"]);  
     this.timeLeft = 15;
     clearInterval(this.interval); 
+  }
+
+  public setNextQuestion(correctAnswer){
+    let nextQuestionId;
+
+    // add 1 to the current id to get the next question id
+    if (correctAnswer[0].id){
+      nextQuestionId = correctAnswer[0].id + 1;
+    }
+
+    // update the current question's active to false 
+    correctAnswer[0].is_active = false;
+
+    // update the is_answer_correct property. this will tally for the total correct answers
+    // currently not using this method
+    // correctAnswer[0].is_answer_correct = true;
+
+    // get the data of new question and update the is_active to true to display it
+    // do not apply on last question
+    if (correctAnswer[0].id !== this.quizesArr.length){
+      let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
+      nextQuestion[0].is_active = true;
+
+      // set display of questions
+      // this.setQuestionDisplay();
+    }
   }
 
 }

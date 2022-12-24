@@ -1,30 +1,34 @@
-<ion-content>
-  <div class="img-holder" *ngIf="level === 1">
-    <img class="img-1" src="../../assets/images/luzon.png" />
+<ion-content class="body">
+  <div class="title-holder">
+    <h1 class="title">
+      {{isCorrect ? 'Correct' : 'Wrong'}} Answer
+    </h1>
   </div>
 
-  <div class="img-holder" *ngIf="level === 2">
-    <img class="img-1" src="../../assets/images/visayas.jpg" />
+  <div class="content-holder">
+    <div class="content">
+      {{description}}
+    </div>
   </div>
 
-  <div class="img-holder" *ngIf="level === 3">
-    <img class="img-1" src="../../assets/images/mindanao.jpg" />
+  <div class="minus-heart-holder" *ngIf="!isCorrect">
+    <div class="minus-heart">
+      <ion-row>
+        <ion-col class="heart-icon-holder">
+          <ion-icon class="heart-icon" name="heart"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <div class="minus">
+            - 1
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
   </div>
 
-  <div class="img-holder" *ngIf="level === 4">
-    <img class="img-4" src="../../assets/images/philippines.jpg" />
-  </div>
-
-  <div class="title">
-    Congratulations! You unlocked the {{island}} map.
-  </div>
-
-  <div class="btn-holder" (click)="close()">
-    <ion-button *ngIf="level !== 4" color="success" class="start-btn">
-      Continue
-    </ion-button>
-    <ion-button *ngIf="level === 4" color="danger" class="start-btn">
-      Exit
+  <div class="button-holder">
+    <ion-button color="success" class="the-btn" (click)="close()">
+      {{isCorrect ? 'Next' : 'Close'}}
     </ion-button>
   </div>
 </ion-content>
