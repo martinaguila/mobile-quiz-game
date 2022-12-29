@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class SelectCategoryPage implements OnInit {
 
+  timeLeft: number = 1;
+
   constructor(
     private router: Router
   ) { }
@@ -16,11 +18,20 @@ export class SelectCategoryPage implements OnInit {
   }
 
   public navigate(page: string, category?: string): void{
-    if (category){
-      this.router.navigate([page + category]);  
-    }else{
-      this.router.navigate([page]);  
-    }
+    var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    music.play();
+    let interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else{
+        if (category){
+          this.router.navigate([page + category]);  
+        }else{
+          this.router.navigate([page]);  
+        }
+        clearInterval(interval); 
+      }
+    },300);  
   }
 
 

@@ -80,3 +80,7 @@
   --border-radius: 100px;
   margin-bottom: 15px;
 }
+
+.btn-animation:active {
+  transform: translateY(4px);
+}

@@ -38,6 +38,7 @@ export class NewQuizPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log("ngOnInit")
     this.timeLeft = 15;
 
     // start time
@@ -59,7 +60,7 @@ export class NewQuizPage implements OnInit {
       this.setQuestionDisplay();
     }
 
-    // reset question
+    // set question
     if (currentId.length === 0){
       if (this.category === 'easy'){
         this.quizesArr = easyQuestion;
@@ -81,6 +82,9 @@ export class NewQuizPage implements OnInit {
       if(this.timeLeft > 0) {
         this.timeLeft--;
       } else{
+        var music = document.getElementById("answerWrong") as HTMLAudioElement;
+        music.play();
+
         // get current question
         let currentQuestion = this.quizesArr.filter(x=>x.is_active === true);
 
@@ -115,11 +119,13 @@ export class NewQuizPage implements OnInit {
     // handling if selected letter is correct
     if (correctAnswer[0].correct_answer === ans){
       // answer is correct
-
-      this.openModal(true, desc, correctAnswer)
+      var music = document.getElementById("answerCorrect") as HTMLAudioElement;
+      music.play();
+      this.openModal(true, desc, correctAnswer);
     }else{
       // answer is incorrect
-
+      var music = document.getElementById("answerWrong") as HTMLAudioElement;
+      music.play();
       // remove 1 to trials
       this.trials = this.trials - 1;
 
@@ -161,8 +167,9 @@ export class NewQuizPage implements OnInit {
       }else{
         // game over if trials reached to 0
         if (this.trials === 0){
-          this.router.navigate(['game-over/gameover']);
+          this.resetQuestions();
           this.timeLeft = 15;
+          this.router.navigate(['game-over/gameover']);
           clearInterval(this.interval); 
           return;
         }else{
@@ -176,8 +183,9 @@ export class NewQuizPage implements OnInit {
 
   public toHome(): void{
     // navigate back to home
-    this.router.navigate(["select-category"]);  
+    this.resetQuestions();
     this.timeLeft = 15;
+    this.router.navigate(["select-category"]);  
     clearInterval(this.interval); 
   }
 
@@ -205,6 +213,13 @@ export class NewQuizPage implements OnInit {
       // set display of questions
       // this.setQuestionDisplay();
     }
+  }
+
+  public resetQuestions(): void{
+    // reset questions
+    let nQuestion = this.quizesArr.filter(x=>x.is_active === true);
+    nQuestion[0].is_active = false;
+    this.quizesArr[0].is_active = true;
   }
 
 }

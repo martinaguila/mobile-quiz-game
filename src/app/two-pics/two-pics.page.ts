@@ -13,6 +13,7 @@ export class TwoPicsPage implements OnInit {
   @Input() description;
   item : any;
   island: any;
+  timeLeft: number = 1;
 
   constructor(
     private modalCtr: ModalController,
@@ -24,11 +25,20 @@ export class TwoPicsPage implements OnInit {
    }
 
   async close() {
-    if (this.isCorrect){
-      this.modalCtr.dismiss("continue");
-    }else{
-      this.modalCtr.dismiss("retain")
-    }
+    var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    music.play();
+    let interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else{
+        if (this.isCorrect){
+          this.modalCtr.dismiss("continue");
+        }else{
+          this.modalCtr.dismiss("retain")
+        }
+        clearInterval(interval); 
+      }
+    },300);  
   }
 
 }

@@ -21,15 +21,15 @@
     </div>
 
     <div class="button-holder">
-      <ion-button color="primary" class="select-btn" (click)="navigate('/new-quiz/','easy')">
+      <ion-button color="primary" class="select-btn btn-animation" (click)="navigate('/new-quiz/','easy')">
         Easy
       </ion-button>
 
-      <ion-button color="success" class="select-btn" (click)="navigate('/new-quiz/','medium')">
+      <ion-button color="success" class="select-btn btn-animation" (click)="navigate('/new-quiz/','medium')">
         Medium
       </ion-button>
 
-      <ion-button color="danger" class="select-btn" (click)="navigate('/new-quiz/','hard')">
+      <ion-button color="danger" class="select-btn btn-animation" (click)="navigate('/new-quiz/','hard')">
         Hard
       </ion-button>
     </div>
@@ -37,7 +37,10 @@
     <div class="oval">
         <!-- <div class="name">GOTPH</div> -->
     </div>
+
+    <audio id="btnPressed">
+      <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
+    </audio>
   </div>
-  
 
 </ion-content>

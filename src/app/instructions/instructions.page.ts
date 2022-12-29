@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class InstructionsPage implements OnInit {
 
+  timeLeft: number = 1;
+
   constructor(
     private router: Router,
   ) { }
@@ -16,6 +18,15 @@ export class InstructionsPage implements OnInit {
   }
 
   public navigate(page: string): void{
-    this.router.navigate([page]);  
+    var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    music.play();
+    let interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else{
+        this.router.navigate([page]);
+        clearInterval(interval); 
+      }
+    },300);  
   }
 }

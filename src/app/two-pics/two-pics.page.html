@@ -27,8 +27,13 @@
   </div>
 
   <div class="button-holder">
-    <ion-button color="success" class="the-btn" (click)="close()">
+    <ion-button color="success" class="the-btn btn-animation" (click)="close()">
       {{isCorrect ? 'Next' : 'Close'}}
     </ion-button>
   </div>
+
+  <audio id="btnPressed">
+    <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
+  </audio>
+
 </ion-content>
