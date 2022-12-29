@@ -8,15 +8,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GameOverPage implements OnInit {
 
-  public score: any = "";
+  status: any;
+  timeLeft: number = 1;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.paramMap.subscribe(paramMap => {
-
-      this.score = paramMap.get("score")
+      this.status = paramMap.get("status")
     });
    }
 
@@ -24,7 +24,16 @@ export class GameOverPage implements OnInit {
   }
 
   public navigate(page: string): void{
-    this.router.navigate([page]);  
+    var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    music.play();
+    let interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+      } else{
+        this.router.navigate([page]);
+        clearInterval(interval); 
+      }
+    },300);   
   }
 
 }

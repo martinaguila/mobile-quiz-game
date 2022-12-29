@@ -1,0 +1,249 @@
+[
+  {
+    "id": 1,
+    "question_number": 1,
+    "question": "What is the oldest city in the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Quezon City"
+      },
+      {
+        "letter": "b",
+        "value": "Baguio City"
+      },
+      {
+        "letter": "c",
+        "value": "Cebu City"
+      }
+    ],
+    "is_active": true,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "Cebu has a population of 2.5 million and is the oldest city and the first capital of the Philippines."
+  },
+
+  {
+    "id": 2,
+    "question_number": 2,
+    "question": "Who is the founder of KKK?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Apolinario Mabini"
+      },
+      {
+        "letter": "b",
+        "value": "Andres Bonifacio"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Rizal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Andres Bonifacio founded the Kataas-taasang, Kagalang-galangang Katipunan ng mga Anak ng Bayan, or simply Katipunan or KKK — and as such he was also called the father of the Katipunan. The Katipunan, a secret revolutionary society, fought valiantly for the Philippine Independence since 1892."
+  },
+
+  {
+    "id": 3,
+    "question_number": 3,
+    "question": "It is considered as the earliest form of writing in the Philippines.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Baybayin"
+      },
+      {
+        "letter": "b",
+        "value": "Indus Script"
+      },
+      {
+        "letter": "c",
+        "value": "Cuneiform"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "Baybayin is a writing system native to the Philippines, attested from before Spanish colonization through to at least the eighteenth century. The word baybay means “to spell” in Tagalog, which was the language most frequently written with the baybayin script."
+  },
+
+  {
+    "id": 4,
+    "question_number": 4,
+    "question": "Where did the name of the Philippines come from?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Queen Elizabeth"
+      },
+      {
+        "letter": "b",
+        "value": "King Phillip I"
+      },
+      {
+        "letter": "c",
+        "value": "King Phillip II"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "The name Philippines comes from Philip II who was the king of Spain during the 16th century when the country became a Spanish colony."
+  },
+
+  {
+    "id": 5,
+    "question_number": 5,
+    "question": "Who led the rebellion in Mactan that results to the death of Ferdinand Magellan?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Raja Humabon"
+      },
+      {
+        "letter": "b",
+        "value": "Datu Zula"
+      },
+      {
+        "letter": "c",
+        "value": "Lapu-Lapu"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "The Battle of Mactan was a fierce clash fought in the Philippines on 27 April 1521. The warriors of Lapu-Lapu, one of the Datus of Mactan under the command of Portuguese explorer Ferdinand Magellan, who was killed in the battle."
+  },
+
+  {
+    "id": 6,
+    "question_number": 6,
+    "question": "Which of the following is the National flower of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Sampaguita"
+      },
+      {
+        "letter": "b",
+        "value": "Orchids"
+      },
+      {
+        "letter": "c",
+        "value": "Daisy"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "Sampaguita was declared as the national flower by Governor-General Frank Murphy in 1934. Its white flower is believed to symbolize purity, fidelity, and hope."
+  },
+
+  {
+    "id": 7,
+    "question_number": 7,
+    "question": "Name the first President of the Philippines.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Emilio Aguinaldo"
+      },
+      {
+        "letter": "b",
+        "value": "Jose P. Laurel"
+      },
+      {
+        "letter": "c",
+        "value": "Manuel L. Quezon"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "Emilio Aguinaldo is the first President of the Philippines. The Malolos Republic was the culmination of the Philippine Revolution, which began with the Katipunan and led to the creation of the First Constitution and Republican Government of Asia."
+  },
+
+  {
+    "id": 8,
+    "question_number": 8,
+    "question": "Who composed the National Anthem of the Philippines?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Jose Palma"
+      },
+      {
+        "letter": "b",
+        "value": "Julian Felipe"
+      },
+      {
+        "letter": "c",
+        "value": "Jose Rizal"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "b",
+    "is_answer_correct": false,
+    "description": "Gen. Emilio Aguinaldo astutely recognized the need for national symbols to rally the nation against the enemy. On June 5, 1898, he commissioned Julian Felipe, a Cavite pianist and composer, to work on a march for the revolutionists."
+  },
+
+  {
+    "id": 9,
+    "question_number": 9,
+    "question": "On the night of July 7, 1892, Jose Rizal was banished and exiled to.",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Cavite"
+      },
+      {
+        "letter": "b",
+        "value": "Bulacan"
+      },
+      {
+        "letter": "c",
+        "value": "Dapitan"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "c",
+    "is_answer_correct": false,
+    "description": "On the night of July 7, 1892, when José Rizal was banished and exiled to Dapitan in Mindanao"
+  },
+
+  {
+    "id": 10,
+    "question_number": 10,
+    "question": "The Father of the Filipino Language?",
+    "selection": [
+      {
+        "letter": "a",
+        "value": "Manuel Quezon"
+      },
+      {
+        "letter": "b",
+        "value": "Manuel Roxas"
+      },
+      {
+        "letter": "c",
+        "value": "Elpidio Quirino"
+      }
+    ],
+    "is_active": false,
+    "correct_answer": "a",
+    "is_answer_correct": false,
+    "description": "Manuel L. Quezon, who is known as the 'Father of the Filipino Language' because it was he who unified the country's various languages."
+  }
+]
+
+
+
+
+
+
+
+  

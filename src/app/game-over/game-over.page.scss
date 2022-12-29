@@ -13,14 +13,17 @@
 }
 
 .title{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 65px;
   text-align: center;
-  color: rgb(88, 46, 24);;
+  color: rgb(88, 46, 24);
+  .subtitle{
+    font-size: 39px;
+  }
 }
 
 .score{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 50px;
   text-align: center;
   color: rgb(88, 46, 24);
@@ -38,6 +41,10 @@
   font-size: 20px;
   margin-left: auto;
   text-transform: none;
-  font-family: "Super Game";
+  font-family: "frozen";
   color: white;
+}
+
+.btn-animation:active {
+  transform: translateY(4px);
 }

@@ -1,13 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="top-header">
-    <ion-menu-button class="nav-icon"></ion-menu-button>
-    <ion-title class="title">
-      Mobile App Games
-    </ion-title>
-    <ion-icon class="home-icon" (click)="toHome()" name="home" slot="end"></ion-icon>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="body">
+  <div class="title-holder">
+    <h1 class="title">
+      {{isCorrect ? 'Correct' : 'Wrong'}} Answer
+    </h1>
+  </div>
 
-<ion-content>
+  <div class="content-holder">
+    <div class="content">
+      {{description}}
+    </div>
+  </div>
+
+  <div class="minus-heart-holder" *ngIf="!isCorrect">
+    <div class="minus-heart">
+      <ion-row>
+        <ion-col class="heart-icon-holder">
+          <ion-icon class="heart-icon" name="heart"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <div class="minus">
+            - 1
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="button-holder">
+    <ion-button color="success" class="the-btn btn-animation" (click)="close()">
+      {{isCorrect ? 'Next' : 'Close'}}
+    </ion-button>
+  </div>
+
+  <audio id="btnPressed">
+    <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
+  </audio>
 
 </ion-content>

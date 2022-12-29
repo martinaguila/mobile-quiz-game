@@ -1,0 +1,55 @@
+<ion-row class="top-header">
+  <ion-col size="3">
+    <ion-icon class="back-btn" name="arrow-back" (click)="toHome()"></ion-icon>
+  </ion-col>
+  <ion-col class="center timer">
+    {{timeLeft}}
+  </ion-col>
+  <ion-col size="3" class="align-right relative">
+    <ion-icon class="heart-btn" name="heart"></ion-icon>
+    <span class="trial">{{trials}}</span>
+  </ion-col>
+</ion-row>
+
+<ion-content class="content">
+
+  <div class="question-holder">
+    <!-- <div *ngFor="let quest of quizesArr" class="question-title">
+      <span *ngIf="quest.is_active">Question {{quest.question_number}} of {{quizesArr.length}}</span>
+
+      <div *ngIf="quest.is_active" class="question">
+        {{quest.question}}
+      </div>
+    </div> -->
+
+    <div class="question-title">
+      <span>Question {{_aNumber}} of {{quizesArr.length}}</span>
+
+      <div class="question">
+        {{_aQuestion}}
+      </div>
+    </div>
+
+    
+  </div>
+
+  <div *ngFor="let quiz of quizesArr">
+    <div *ngIf="quiz.is_active">
+      <ion-button class="selection-btn" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter, quiz.description)">
+        {{selection.value}}
+      </ion-button>
+    </div>
+  </div>
+
+  <audio id="answerCorrect">
+    <source src="../../assets/audio/answer_correct.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="answerWrong">
+    <source src="../../assets/audio/answer_wrong.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- <ion-button id="open-modal" expand="block" (click)="opem($event)">Open Modal</ion-button> -->
+
+</ion-content>
+  

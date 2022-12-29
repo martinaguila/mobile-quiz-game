@@ -9,11 +9,9 @@
         <ion-label>Mechanics</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
-          1. Player has only 3 trials to finish the game. <br>
-          2. Player is given 15 seconds to answer the current question. <br>
-          3. Game is over if player used all its trials or 15 seconds lapsed. <br>
-          4. Unlock new levels every 20 questions. <br>
-          5. Score is tallied on game over or when the game finished.
+          1. Player has only 3 trials to finish 1 category. <br>
+          2. Player is given 15 seconds to answer each question. <br>
+          3. Player looses 1 trial on every wrong answer or 15 seconds expires. <br>
       </div>
     </ion-accordion>
     <ion-accordion value="second">
@@ -21,23 +19,27 @@
         <ion-label>Gameplay</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
-          1. Answer questions to go to the next one. <br>
-          2. Player looses 1 trial on every wrong answer.
+          1. Select 3 categories of dificulty. <br>
+          2. Answer questions to go to the next one. <br>
+          3. Need to have 10 correct answers to finish the game. 
       </div>
     </ion-accordion>
   </ion-accordion-group>
 
-  <div class="btn-holder" (click)="navigate('/quiz-game')">
-    <ion-button color="success" class="start-btn">
-      <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+  <div class="btn-holder btn-animation" (click)="navigate('/select-category')">
+    <ion-button color="success" class="start-btn btn-animation">
       Play Now
     </ion-button>
   </div>
 
-  <div class="btn-holder" (click)="navigate('/home')">
-    <ion-button color="danger" class="start-btn">
-      <!-- <ion-icon slot="start" name="play"></ion-icon> -->
+  <div class="btn-holder btn-animation" (click)="navigate('/home')">
+    <ion-button color="danger" class="start-btn btn-animation">
       Exit
     </ion-button>
   </div>
+
+  <audio id="btnPressed">
+    <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
+  </audio>
+
 </ion-content>

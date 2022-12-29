@@ -1,6 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import quizes from '../../assets/quiz-data/quizes.json';
+import { ModalController } from '@ionic/angular';
+import { TwoPicsPage } from '../two-pics/two-pics.page';
+
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quiz-game',
@@ -23,14 +27,31 @@ export class QuizGamePage implements OnInit {
 
   constructor(
     private router: Router,
+    public modalCtrl: ModalController,
+    public popoverCtrl: PopoverController
   ) { }
 
   ngOnInit() {
-    console.log(quizes)
     this.timeLeft = 15;
     // pass the json file to variable
     this.quizesArr = quizes;
-    this.setQuestionDisplay();
+    console.log(quizes,this.quizesArr.length)
+
+    // do not display question if current question is last one
+    let currentId = this.quizesArr.filter(x=>x.is_active === true);
+    console.log(currentId)
+    if (currentId.length > 0){
+      this.setQuestionDisplay();
+    }
+
+    // reset question
+    if (currentId.length === 0){
+      this.quizesArr = quizes;
+      this.trials = 3;
+      this.totalScore = 0;
+      this.activeQuestion = 0;
+      this.setQuestionDisplay();
+    }
   }
 
   ionViewDidEnter(){
@@ -42,16 +63,40 @@ export class QuizGamePage implements OnInit {
 
     // set data to default state
     let currentId = this.quizesArr.filter(x=>x.is_active === true);
-    this.quizesArr[currentId[0].id - 1].is_active = false;
-    this.quizesArr[0].is_active = true;
-    this.setQuestionDisplay();
+    console.log(currentId)
+
+    // do not display question if current question is last one
+    if (currentId.length > 0){
+      this.quizesArr[currentId[0].id - 1].is_active = false;
+      this.quizesArr[0].is_active = true;
+      this.setQuestionDisplay();
+    }
+
+    // reset question
+    if (currentId.length === 0){
+      this.quizesArr = quizes;
+      this.trials = 3;
+      this.totalScore = 0;
+      this.activeQuestion = 0;
+      this.setQuestionDisplay();
+    }
   }
 
   setQuestionDisplay(){
     // display question which is active
+    console.log(this.quizesArr)
     let nQuestion = this.quizesArr.filter(x=>x.is_active === true);
-    this._aQuestion = nQuestion[0].question;
-    this._aNumber = nQuestion[0].question_number;
+    console.log("nQuestion",nQuestion)
+
+    // set question to default
+    if (nQuestion.length === 0){
+      this.quizesArr[0].is_active = true;
+      this._aQuestion = this.quizesArr[0].question;
+      this._aNumber = this.quizesArr[0].question_number;
+    }else{
+      this._aQuestion = nQuestion[0].question;
+      this._aNumber = nQuestion[0].question_number;
+    }
   }
 
   startTimer() {
@@ -77,6 +122,7 @@ export class QuizGamePage implements OnInit {
   public onClickAnswer(ans: string): void{
     // get the active question
     // use this to compare the correct answer and get the active id
+    // correctAnswer is the current question displayed
     let correctAnswer = this.quizesArr.filter(x=>x.is_active === true);
 
     // handling if selected letter is correct
@@ -84,25 +130,49 @@ export class QuizGamePage implements OnInit {
       // answer is correct
       this.totalScore = this.totalScore + 1;
 
-      // add 1 to the id to get the next question id
-      let nextQuestionId = correctAnswer[0].id + 1;
+      let nextQuestionId;
+
+      // add 1 to the current id to get the next question id
+      // do not apply on last number
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        nextQuestionId = correctAnswer[0].id + 1;
+      }
 
       // update the current question's active to false 
       correctAnswer[0].is_active = false;
 
       // update the is_answer_correct property. this will tally for the total correct answers
+      // currently not using this method
       correctAnswer[0].is_answer_correct = true;
 
       // get the data of new question and update the is_active to true to display it
-      let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-      nextQuestion[0].is_active = true;
+      // do not apply on last question
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
+        nextQuestion[0].is_active = true;
+
+        // set display of questions
+        this.setQuestionDisplay();
+      }
 
       // restart timer to 15 seconds
       this.timeLeft = 15;
 
-      // set display of questions
-      this.setQuestionDisplay();
-      console.log(this.quizesArr)
+      // display map
+      if (correctAnswer[0].id === 20 || 
+          correctAnswer[0].id === 40 ||
+          correctAnswer[0].id === 60
+        ){
+          this.openModal(correctAnswer[0].id);
+      }
+
+      // for testing only
+      // if (correctAnswer[0].id === 1 || 
+      //   correctAnswer[0].id === 2 ||
+      //   correctAnswer[0].id === 3
+      // ){
+      //   this.openModal(correctAnswer[0].id);
+      // }
     }else{
       // answer is incorrect
 
@@ -117,22 +187,45 @@ export class QuizGamePage implements OnInit {
         return;
       }
 
-      // add 1 to the id to get the next question id
-      let nextQuestionId = correctAnswer[0].id + 1;
+      let nextQuestionId;
+
+      // add 1 to the current id to get the next question id
+      // do not apply on last number
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        nextQuestionId = correctAnswer[0].id + 1;
+      }
 
       // update the current question's active to false 
       correctAnswer[0].is_active = false;
 
       // get the data of new question and update the is_active to true to display it
-      let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
-      nextQuestion[0].is_active = true;
+      // do not apply on last question
+      if (correctAnswer[0].id !== this.quizesArr.length){
+        let nextQuestion = this.quizesArr.filter(x=>x.id === nextQuestionId);
+        nextQuestion[0].is_active = true;
+
+        // set display of questions
+        this.setQuestionDisplay();
+      }
 
       // restart timer to 15 seconds
       this.timeLeft = 15;
 
-      // set display of questions
-      this.setQuestionDisplay();
-      console.log(this.quizesArr)
+      // display map
+      if (correctAnswer[0].id === 20 || 
+          correctAnswer[0].id === 40 ||
+          correctAnswer[0].id === 60
+        ){
+          this.openModal(correctAnswer[0].id);
+      }
+
+      // for testing only
+      // if (correctAnswer[0].id === 1 || 
+      //   correctAnswer[0].id === 2 ||
+      //   correctAnswer[0].id === 3
+      // ){
+      //   this.openModal(correctAnswer[0].id);
+      // }
     }
   }
 
@@ -141,6 +234,52 @@ export class QuizGamePage implements OnInit {
     this.trials = 3;
     this.totalScore = 0;
     this.activeQuestion = 0;
+  }
+
+  async openModal(id) {
+    let level;
+    if (id === 20){
+      level = 1;
+    }
+    if (id === 40){
+      level = 2;
+    }
+    if (id === 60){
+      level = 3;
+    }
+
+    // for testing only
+    // if (id === 1){
+    //   level = 1;
+    // }
+    // if (id === 2){
+    //   level = 2;
+    // }
+    // if (id === 3){
+    //   level = 3;
+    // }
+
+    this.timeLeft = 15;
+    clearInterval(this.interval); 
+
+    const modal = await this.modalCtrl.create({
+      component: TwoPicsPage,
+      cssClass: 'small-modal',
+      componentProps: {
+        'level': level
+      }
+    });
+
+    modal.onDidDismiss().then((result) => {
+      if (result.data === "continue"){
+        this.startTimer();
+      }
+      
+    });
+
+    return await modal.present();
+    /** Sync event from popover component */
+
   }
 
 }

@@ -2,26 +2,38 @@
   <div class="container">
 
     <div class="game-over-holder">
-      <div class="title">
+      <div class="title" *ngIf="status === 'gameover'">
         Game <br>Over
       </div>
 
-      <div class="score">
-        Score {{score}}
+      <div class="title" *ngIf="status === 'finished'">
+        Great!
+        <div class="subtitle">
+          You finished the game
+        </div>
       </div>
+
+      <!-- <div class="score">
+        Score {{score}}
+      </div> -->
   
-      <div class="btn-holder" (click)="navigate('/quiz-game')">
-        <ion-button color="success" class="start-btn">
+      <div class="btn-holder" (click)="navigate('/select-category')">
+        <ion-button color="success" class="start-btn btn-animation">
           Play Again
         </ion-button>
       </div>
 
       <div class="btn-holder" (click)="navigate('/home')">
-        <ion-button color="danger" class="start-btn">
+        <ion-button color="danger" class="start-btn btn-animation">
           Exit
         </ion-button>
       </div>
     </div>
 
+    <audio id="btnPressed">
+      <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
+    </audio>
+
   </div>
 </ion-content>
+  

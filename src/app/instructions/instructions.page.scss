@@ -1,5 +1,5 @@
 .title{
-  font-family: "Super Game";
+  font-family: "frozen";
   font-size: 25px;
   color: white;
   text-align: center;
@@ -19,5 +19,9 @@
   font-size: 20px;
   margin-left: auto;
   text-transform: none;
-  font-family: "Super Game";
+  font-family: "frozen";
+}
+
+.btn-animation:active {
+  transform: translateY(4px);
 }

@@ -20,12 +20,20 @@ const routes: Routes = [
     loadChildren: () => import('./quiz-game/quiz-game.module').then( m => m.QuizGamePageModule)
   },
   {
-    path: 'game-over/:score',
+    path: 'game-over/:status',
     loadChildren: () => import('./game-over/game-over.module').then( m => m.GameOverPageModule)
   },
   {
     path: 'instructions',
     loadChildren: () => import('./instructions/instructions.module').then( m => m.InstructionsPageModule)
+  },
+  {
+    path: 'select-category',
+    loadChildren: () => import('./select-category/select-category.module').then( m => m.SelectCategoryPageModule)
+  },
+  {
+    path: 'new-quiz/:category',
+    loadChildren: () => import('./new-quiz/new-quiz.module').then( m => m.NewQuizPageModule)
   },
 ];
 

@@ -1,25 +1,76 @@
-// header
-.top-header{
-  --background: #232b2b;
+.body{
+  --background: linear-gradient(#fbebca, #f3cd7a) !important;
+}
+
+.title-holder{
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title{
+  border: 2px solid #cdab5d;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "frozen";
+}
+
+.content{
+  background: #245827;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  border: 5px solid #9d6e39;  
+  margin: 25px;
+  font-size: 20px;
   text-align: center;
-  font-weight: bold;
-  color: white;
+  font-weight: 500;
 }
 
-.home-icon{
-  color: white;
-  position: absolute;
-  right: 5%;
+.minus-heart-holder, .button-holder{
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-.nav-icon{
-  color: white;
-  position: absolute;
-  left: 2%;
-  top: 8%;
-  width: 36px;
-  z-index: 100;
+.minus-heart{
+  border-radius: 10px;
+  border: 5px solid #1c4e21;
+  background: linear-gradient(#f5f5a9,#81b930);
 }
+
+.heart-icon{
+  font-size: 90px;
+  position: absolute;
+  top: -46%;
+  color: #d11816;
+}
+
+.minus{
+  font-size: 30px;
+  color: white;
+  // font-size: 50px;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.button-holder{
+  margin-top: 30px;
+}
+
+.the-btn{
+  // height: 50px;
+  width: 100%;
+  --border-radius: 10px;
+  font-size: 20px;
+  /* margin-left: auto; */
+  text-transform: none;
+  font-family: "frozen";
+  padding-left: 0;
+  padding-right: 0;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.btn-animation:active {
+  transform: translateY(4px);
+}
+
