@@ -49,7 +49,7 @@ export class HomePage {
     var music = document.getElementById("gameAudio") as HTMLAudioElement;
     
     if (this.musicOn){
-      music.play();
+      music.play(); 
 
       this.icon = "volume-high";
       this.color = "success";
