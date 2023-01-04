@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./quiz-game/quiz-game.module').then( m => m.QuizGamePageModule)
   },
   {
-    path: 'game-over/:status',
+    path: 'game-over/:status/:score/:level',
     loadChildren: () => import('./game-over/game-over.module').then( m => m.GameOverPageModule)
   },
   {
@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'new-quiz/:category',
     loadChildren: () => import('./new-quiz/new-quiz.module').then( m => m.NewQuizPageModule)
+  },
+  {
+    path: 'map-view',
+    loadChildren: () => import('./map-view/map-view.module').then( m => m.MapViewPageModule)
   },
 ];
 

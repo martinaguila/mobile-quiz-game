@@ -9,21 +9,21 @@
       <div class="title" *ngIf="status === 'finished'">
         Great!
         <div class="subtitle">
-          You finished the game
+          You finished the level
         </div>
       </div>
 
       <!-- <div class="score">
-        Score {{score}}
+        Score: {{totalScore}}
       </div> -->
   
-      <div class="btn-holder" (click)="navigate('/select-category')">
+      <div class="btn-holder" *ngIf="status === 'finished'" (click)="navigate('/select-category')">
         <ion-button color="success" class="start-btn btn-animation">
           Play Again
         </ion-button>
       </div>
 
-      <div class="btn-holder" (click)="navigate('/home')">
+      <div class="btn-holder" *ngIf="status === 'gameover'" (click)="navigate('/home')">
         <ion-button color="danger" class="start-btn btn-animation">
           Exit
         </ion-button>

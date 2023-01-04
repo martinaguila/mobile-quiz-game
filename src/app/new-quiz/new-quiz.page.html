@@ -33,9 +33,9 @@
     
   </div>
 
-  <div *ngFor="let quiz of quizesArr">
+  <div *ngFor="let quiz of quizesArr; let i = index">
     <div *ngIf="quiz.is_active">
-      <ion-button class="selection-btn" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter, quiz.description)">
+      <ion-button [ngClass]="i == 3 && level == 3 ? 'selection-btn2' : 'selection-btn'" *ngFor="let selection of quiz.selection" (click)="onClickAnswer(selection.letter, quiz.description)">
         {{selection.value}}
       </ion-button>
     </div>
