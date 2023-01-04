@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { MapViewPage } from '../map-view/map-view.page';
 
 @Component({
   selector: 'app-game-over',
@@ -9,14 +11,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class GameOverPage implements OnInit {
 
   status: any;
+  totalScore: any;
+  level: any;
   timeLeft: number = 1;
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private modalCtrl: ModalController
   ) {
     this.activatedRoute.paramMap.subscribe(paramMap => {
-      this.status = paramMap.get("status")
+      this.status = paramMap.get("status");
+      this.totalScore = paramMap.get("score")
+      this.level = paramMap.get("level")
     });
    }
 
@@ -30,10 +37,33 @@ export class GameOverPage implements OnInit {
       if(this.timeLeft > 0) {
         this.timeLeft--;
       } else{
-        this.router.navigate([page]);
+        // this.router.navigate([page]);
+        if (this.status === "finished"){
+          this.openModal(page);
+        }else{
+          this.router.navigate([page]);
+        }
+        
         clearInterval(interval); 
       }
     },300);   
+  }
+
+  async openModal(page: string){
+    const modal = await this.modalCtrl.create({
+      component: MapViewPage,
+      cssClass: 'small-modal',
+      componentProps: {
+        'level': this.level,
+      },
+    });
+
+    modal.onDidDismiss().then((result) => {
+      this.router.navigate([page]);      
+    });
+
+    return await modal.present();
+
   }
 
 }

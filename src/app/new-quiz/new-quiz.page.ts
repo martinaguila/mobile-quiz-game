@@ -21,6 +21,7 @@ export class NewQuizPage implements OnInit {
   public trials: number = 3;
   public activeQuestion: number = 0;
   private totalScore: number = 0;
+  public level;
 
   public _aQuestion: any;
   public _aNumber: any;
@@ -48,10 +49,13 @@ export class NewQuizPage implements OnInit {
     // display question depending on category selected
     if (this.category === 'easy'){
       this.quizesArr = easyQuestion;
+      this.level = 1;
     }else if (this.category === 'medium'){
-      this.quizesArr = mediumQuestion
+      this.quizesArr = mediumQuestion;
+      this.level = 2;
     }else{
-      this.quizesArr = hardQuestion
+      this.quizesArr = hardQuestion;
+      this.level = 3;
     }
 
     // do not display question if current question is last one
@@ -64,13 +68,16 @@ export class NewQuizPage implements OnInit {
     if (currentId.length === 0){
       if (this.category === 'easy'){
         this.quizesArr = easyQuestion;
+        this.level = 1;
       }else if (this.category === 'medium'){
-        this.quizesArr = mediumQuestion
+        this.quizesArr = mediumQuestion;
+        this.level = 2;
       }else{
-        this.quizesArr = hardQuestion
+        this.quizesArr = hardQuestion;
+        this.level = 3;
       }
       this.trials = 3;
-      this.totalScore = 0;
+      // this.totalScore = 0;
       this.activeQuestion = 0;
       this.setQuestionDisplay();
     }
@@ -104,9 +111,11 @@ export class NewQuizPage implements OnInit {
       this.quizesArr[0].is_active = true;
       this._aQuestion = this.quizesArr[0].question;
       this._aNumber = this.quizesArr[0].question_number;
+      this.activeQuestion = this.quizesArr[0].question_number;
     }else{
       this._aQuestion = nQuestion[0].question;
       this._aNumber = nQuestion[0].question_number;
+      this.activeQuestion = this.quizesArr[0].question_number;
     }
   }
 
@@ -119,6 +128,7 @@ export class NewQuizPage implements OnInit {
     // handling if selected letter is correct
     if (correctAnswer[0].correct_answer === ans){
       // answer is correct
+      this.totalScore =+ 1;
       var music = document.getElementById("answerCorrect") as HTMLAudioElement;
       music.play();
       this.openModal(true, desc, correctAnswer);
@@ -148,6 +158,7 @@ export class NewQuizPage implements OnInit {
     });
 
     modal.onDidDismiss().then((result) => {
+      this.totalScore = 0;
       if (result.data === "continue"){
         // get the current question
         let currentQuestion = this.quizesArr.filter(x=>x.is_active === true);
@@ -155,7 +166,7 @@ export class NewQuizPage implements OnInit {
         // if id is 10, display the end modal
         console.log(currentQuestion[0].id)
         if (currentQuestion[0].id === 10){
-          this.router.navigate(['game-over/finished']);
+          this.router.navigate(['game-over/finished/'+this.totalScore+'/'+this.level]);
           this.timeLeft = 15;
           clearInterval(this.interval); 
           return;
@@ -169,7 +180,7 @@ export class NewQuizPage implements OnInit {
         if (this.trials === 0){
           this.resetQuestions();
           this.timeLeft = 15;
-          this.router.navigate(['game-over/gameover']);
+          this.router.navigate(['game-over/gameover/'+this.totalScore+'/0']);
           clearInterval(this.interval); 
           return;
         }else{
