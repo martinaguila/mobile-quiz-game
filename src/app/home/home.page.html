@@ -1,25 +1,33 @@
 <ion-content [fullscreen]="true">
+    <!-- <img class="home-bg" src="../../assets/images/home_bg.jpeg"> -->
 
     <video *ngIf="showVideo" autoplay class="video">
       <source src="../../assets/gif/splash.mp4" type="video/mp4">
     </video>
 
   <div id="container">
+      <img class="home-bg" src="../../assets/images/home_bg.jpeg">
     <div class="container-1">
-      <h1 class="title no-margin blazing">
-        GotPH: Game of the Philippine History
-        <!-- <div>
-          GotPH:
-        </div>
-        <div>
-          Game of the
-        </div>
-        <div>
-          Philippine History
-        </div> -->
-      </h1>
+      <div class="title-holder">
+        <h1 class="title no-margin blazing">
+          GotPH: Game of the Philippine History
+          <!-- <div>
+            GotPH:
+          </div>
+          <div>
+            Game of the
+          </div>
+          <div>
+            Philippine History
+          </div> -->
+        </h1>
+      </div>
+      
+      
+      
+    </div>
 
-      <div class="icon-whole-holder">
+    <div class="icon-whole-holder">
         <div class="icon-holder">
           <!-- <div class="help-1">
             <ion-icon name="help" color="light"></ion-icon>
@@ -42,8 +50,6 @@
           </div>
         </div>
       </div>
-      
-    </div>
 
     <div class="btn-holder" (click)="navigate('/select-category')">
       <ion-button color="success" class="start-btn btn-animation">
@@ -66,13 +72,29 @@
     <!-- <audio *ngIf="musicOn" src="../../assets/audio/GotPH_sounds.mp3" autoplay loop></audio> -->
     <!-- <audio *ngIf="!musicOn" src="../../assets/audio/GotPH_sounds.mp3" muted></audio> -->
 
-    <audio id="gameAudio" autoplay loop>
+    <audio id="gameAudio">
       <source src="../../assets/audio/GotPH_sounds.mp3" type="audio/mp3">
     </audio>
 
-    <audio id="btnPressed">
+    <!-- <audio id="btnPressed">
       <source src="../../assets/audio/button_pressed.mp3" type="audio/mp3">
-    </audio>
+    </audio> -->
+
+    <!-- <ion-button class="audio-btn btn-animation" (click)="audio1('../../assets/audio/click_1.mp3')" color="{{color}}">
+      1
+    </ion-button>
+
+    <ion-button class="audio-btn btn-animation" (click)="audio1('../../assets/audio/click_2.mp3')" color="{{color}}">
+      2
+    </ion-button>
+
+    <ion-button class="audio-btn btn-animation" (click)="audio1('../../assets/audio/click_3.mp3')" color="{{color}}">
+      3
+    </ion-button>
+
+    <ion-button class="audio-btn btn-animation" (click)="audio1('../../assets/audio/click_4.mp3')" color="{{color}}">
+      4
+    </ion-button> -->
 
   </div>
 </ion-content>

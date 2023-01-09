@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AudioService } from 'src/services/audio.service';
 
 @Component({
   selector: 'app-map-view',
@@ -15,7 +16,8 @@ export class MapViewPage implements OnInit {
 
   constructor(
     private modalCtr: ModalController,
-    private router: Router
+    private router: Router,
+    private audioService: AudioService
   ) { }
 
   ngOnInit() {
@@ -33,6 +35,9 @@ export class MapViewPage implements OnInit {
    }
 
   async close() {
+    this.audioService.button("game_button");  
+    // this.audioService.test("../../assets/audio/click_1.mp3");
+
     if (this.level === 3){
       this.level = 4;
       this.island = "Pilippine";

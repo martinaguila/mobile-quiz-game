@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { AudioService } from 'src/services/audio.service';
 import { MapViewPage } from '../map-view/map-view.page';
 
 @Component({
@@ -18,7 +19,8 @@ export class GameOverPage implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private audioService: AudioService
   ) {
     this.activatedRoute.paramMap.subscribe(paramMap => {
       this.status = paramMap.get("status");
@@ -31,8 +33,11 @@ export class GameOverPage implements OnInit {
   }
 
   public navigate(page: string): void{
-    var music = document.getElementById("btnPressed") as HTMLAudioElement;
-    music.play();
+    // var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    // music.play();
+    this.audioService.button("game_button");
+    // this.audioService.test("../../assets/audio/click_1.mp3");
+
     let interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AudioService } from 'src/services/audio.service';
 
 @Component({
   selector: 'app-select-category',
@@ -11,15 +12,19 @@ export class SelectCategoryPage implements OnInit {
   timeLeft: number = 1;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private audioService: AudioService
   ) { }
 
   ngOnInit() {
   }
 
   public navigate(page: string, category?: string): void{
-    var music = document.getElementById("btnPressed") as HTMLAudioElement;
-    music.play();
+    // var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    // music.play();
+    this.audioService.button("game_button");
+    // this.audioService.test("../../assets/audio/click_1.mp3");
+
     let interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
