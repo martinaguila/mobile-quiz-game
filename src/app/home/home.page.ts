@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { AudioService } from 'src/services/audio.service';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +17,23 @@ export class HomePage {
 
   constructor(
     private router: Router,
+    private audioService: AudioService
   ) {
   }
 
+  ngAfterViewInit(){
+    this.audioService.preload("game_button","../../assets/audio/button_pressed.mp3")
+
+  }
+
   ngOnInit(){
+    // this.audioService.preload('tabSwitch', '../../assets/audio/GotPH_sounds.mp3');
+    // this.audioService.play("game_bg")
+    var music = document.getElementById("gameAudio") as HTMLAudioElement;
+    music.loop = true;
+    music.play();
+    // this.audio2.nativeElement.play()
+    console.log("duration",music.paused)
     let interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
@@ -31,8 +45,8 @@ export class HomePage {
   }
 
   public navigate(page: string): void{
-    var music = document.getElementById("btnPressed") as HTMLAudioElement;
-    music.play();
+    this.audioService.test("../../assets/audio/click_1.mp3");
+    // var music = document.getElementById("btnPressed") as HTMLAudioElement;
     let interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
@@ -45,20 +59,23 @@ export class HomePage {
 
   audio(){
     this.musicOn = !this.musicOn;
-
     var music = document.getElementById("gameAudio") as HTMLAudioElement;
     
     if (this.musicOn){
-      music.play(); 
-
+      // this.audioService.play("game_bg");
+      music.play()
       this.icon = "volume-high";
       this.color = "success";
     }else{
-      music.pause();
-
+      // this.audioService.pause("game_bg");
+      music.pause()
       this.icon = "volume-off";
       this.color = "danger";
     }
+  }
+
+  audio1(assets: string){
+    this.audioService.test(assets)
   }
 
 }

@@ -5,6 +5,7 @@ import mediumQuestion from '../../assets/quiz-data/quizes-medium.json';
 import hardQuestion from '../../assets/quiz-data/quizes-hard.json';
 import { ModalController } from '@ionic/angular';
 import { TwoPicsPage } from '../two-pics/two-pics.page';
+import { AudioService } from 'src/services/audio.service';
 
 @Component({
   selector: 'app-new-quiz',
@@ -30,7 +31,8 @@ export class NewQuizPage implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private audioService: AudioService
   ) { 
     this.activatedRoute.paramMap.subscribe(paramMap => {
 
@@ -112,6 +114,7 @@ export class NewQuizPage implements OnInit {
       this._aQuestion = this.quizesArr[0].question;
       this._aNumber = this.quizesArr[0].question_number;
       this.activeQuestion = this.quizesArr[0].question_number;
+      this.totalScore = 0;
     }else{
       this._aQuestion = nQuestion[0].question;
       this._aNumber = nQuestion[0].question_number;
@@ -128,14 +131,22 @@ export class NewQuizPage implements OnInit {
     // handling if selected letter is correct
     if (correctAnswer[0].correct_answer === ans){
       // answer is correct
-      this.totalScore =+ 1;
+      this.totalScore += 1;
       var music = document.getElementById("answerCorrect") as HTMLAudioElement;
       music.play();
+      music.pause();
+
+      this.audioService.test("../../assets/audio/answer_correct.mp3");
+      this.audioService.test("../../assets/audio/answer_correct_2.mp3");
+
+
       this.openModal(true, desc, correctAnswer);
     }else{
       // answer is incorrect
-      var music = document.getElementById("answerWrong") as HTMLAudioElement;
-      music.play();
+      // var music = document.getElementById("answerWrong") as HTMLAudioElement;
+      // music.play();
+      this.audioService.button("game_error");
+
       // remove 1 to trials
       this.trials = this.trials - 1;
 
@@ -158,7 +169,6 @@ export class NewQuizPage implements OnInit {
     });
 
     modal.onDidDismiss().then((result) => {
-      this.totalScore = 0;
       if (result.data === "continue"){
         // get the current question
         let currentQuestion = this.quizesArr.filter(x=>x.is_active === true);
@@ -193,7 +203,10 @@ export class NewQuizPage implements OnInit {
   }
 
   public toHome(): void{
-    // navigate back to home
+    // navigate back to category
+    this.audioService.button("game_button");
+    // this.audioService.test("../../assets/audio/click_1.mp3");
+
     this.resetQuestions();
     this.timeLeft = 15;
     this.router.navigate(["select-category"]);  

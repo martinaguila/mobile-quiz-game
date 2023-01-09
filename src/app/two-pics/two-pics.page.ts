@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AudioService } from 'src/services/audio.service';
 
 @Component({
   selector: 'app-two-pics',
@@ -17,7 +18,8 @@ export class TwoPicsPage implements OnInit {
 
   constructor(
     private modalCtr: ModalController,
-    private router: Router
+    private router: Router,
+    private audioService: AudioService
   ) { }
 
   ngOnInit() {
@@ -25,8 +27,11 @@ export class TwoPicsPage implements OnInit {
    }
 
   async close() {
-    var music = document.getElementById("btnPressed") as HTMLAudioElement;
-    music.play();
+    // var music = document.getElementById("btnPressed") as HTMLAudioElement;
+    // music.play();
+    this.audioService.button("game_button");
+    // this.audioService.test("../../assets/audio/click_1.mp3");
+
     let interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
